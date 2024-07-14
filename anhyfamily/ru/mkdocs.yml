@@ -1,0 +1,43 @@
+site_name: AnhyFamily Плагин
+theme:
+  name: 'material'
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  palette: 
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to light mode
+
+      primary: blue grey
+       
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+
+      primary: blue grey
+nav:
+  - Home: index.md
+  - Команды:
+    - Команды и Управление: commands.md
+  - Персонализация:
+    - Пол Игрока: gender.md
+    - "Имя и Фамилия": names.md
+  - "Семья":
+    - Брак: marry.md
+    - Усыновление: adopt.md
+    - Разрыв Семейных Отношений: separate.md
+    - Информационный Блок: info.md
+  - Семейные Функции:
+    - Семейный Префикс: prefix.md
+    - Семейный Чат: chat.md
+    - Семейный Дом: home.md
+    - Семейный Сундук: chest.md
+  - Дополнительно:
+    - Обнимашки: hugs.md
+    - Конфигурационный Файл: config.md
+    - Плейсхолдеры: placeholders.md
