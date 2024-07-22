@@ -3,13 +3,19 @@ theme:
   name: 'material'
   logo: assets/logo.png
   favicon: assets/favicon.ico
+  
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    
   palette: 
 
     # Palette toggle for light mode
     - scheme: default
       toggle:
         icon: material/brightness-7 
-        name: Switch to light mode
+        name: Switch to dark mode
 
       primary: blue grey
        
@@ -17,7 +23,7 @@ theme:
     - scheme: slate
       toggle:
         icon: material/brightness-4
-        name: Switch to dark mode
+        name: Switch to light mode
 
       primary: blue grey
 nav:
