@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="assets/logo_maxy.png" alt="AnhyFamily">
+    <img src="logo_maxy.png" alt="AnhyFamily">
 </div>
 
 The **AnhyFamily** plugin for Minecraft servers transforms ordinary gameplay into an engaging social journey by adding a rich array of new interaction possibilities for players. With its multifunctionality, customizability, and interactivity, **AnhyFamily** provides players and administrators with numerous tools to create unique family structures and social bonds.
