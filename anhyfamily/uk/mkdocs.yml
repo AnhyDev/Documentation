@@ -1,4 +1,4 @@
-site_name: AnhyFamily Плагін
+site_name: Minecraft plugin AnhyFamily
 theme:
   name: 'material'
   logo: assets/logo.png
@@ -21,7 +21,7 @@ theme:
 
       primary: blue grey
 nav:
-  - Home: index.md
+  - Загальний опис: index.md
   - Команди:
     - Команди та Керування: commands.md
   - Персоналізація:
