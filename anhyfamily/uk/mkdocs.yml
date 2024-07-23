@@ -1,4 +1,4 @@
-site_name: Minecraft plugin AnhyFamily
+site_name: ANHYFAMILY
 theme:
   name: 'material'
   logo: assets/logo.png
@@ -11,7 +11,10 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
+    - navigation.instant.preview
     - navigation.footer
+    - navigation.expand
+    - navigation.top
     
   palette: 
 
@@ -49,29 +52,32 @@ extra:
       link: https://discord.gg/ubkyHWuSzD
 
 copyright: Copyright &copy; 2015 - 2024 Anhydrite (ANHY)
+
 repo_url: https://github.com/AnhyDev/AnhyFamily
+
+
 nav:
   - Home: README.md
-  - Команди:
+  - КОМАНДИ:
     - Команди та Керування: commands.md
-  - Персоналізація:
+  - ПЕРСОНАЛІЗАЦІЯ:
     - Стать Гравця: gender.md
     - "Ім'я та Прізвище": names.md
-  - "Сім'я":
+  - "СІМ'Я":
     - Одруження: marry.md
     - Усиновлення: adopt.md
     - Розірвання Родинних Стосунків: separate.md
     - Інформаційний Блок: info.md
-  - Сімейні Функції:
+  - СІМЕЙНІ ФУНКЦІЇ:
     - Сімейний Префікс: prefix.md
     - Сімейний Чат: chat.md
     - Сімейний Хом: home.md
     - Сімейна Скриня: chest.md
-  - Платежі:
+  - ПЛАТЕЖІ:
     - Оплата в Віртуальній Валюті: vault.md
     - Оплата в Предметах: items.md
     - Оплата в Криптовалюті: crypto.md
-  - Додатково:
+  - ДОДАТКОВО:
     - Обнімашки: hugs.md
     - Конфігураційний Файл: config.md
     - Плейсхолдери: placeholders.md
