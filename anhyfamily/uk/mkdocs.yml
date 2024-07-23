@@ -4,30 +4,54 @@ theme:
   logo: assets/logo.png
   favicon: assets/favicon.ico
   
+  font:
+    text: Ubuntu
+  
   features:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
+    - navigation.footer
     
   palette: 
 
+
     # Palette toggle for light mode
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
 
-      primary: blue grey
+      primary: grey
+      accent: light blue
        
     # Palette toggle for dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
 
-      primary: blue grey
+      primary: black
+      accent: light blue
+      
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/AnhyDev
+      
+    - icon: fontawesome/brands/x-twitter 
+      link: https://x.com/AnhyDev
+      
+    - icon: fontawesome/brands/discord 
+      link: https://discord.gg/ubkyHWuSzD
+
+copyright: Copyright &copy; 2015 - 2024 Anhydrite (ANHY)
+repo_url: https://github.com/AnhyDev/AnhyFamily
 nav:
-  - Загальний опис: index.md
+  - Home: README.md
   - Команди:
     - Команди та Керування: commands.md
   - Персоналізація:
