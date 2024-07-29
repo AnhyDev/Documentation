@@ -1,43 +1,83 @@
-site_name: AnhyFamily Плагин
+site_name: ANHYFAMILY
 theme:
   name: 'material'
   logo: assets/logo.png
   favicon: assets/favicon.ico
+  
+  font:
+    text: Ubuntu
+  
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.footer
+    - navigation.expand
+    - navigation.top
+    
   palette: 
 
     # Palette toggle for light mode
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       toggle:
         icon: material/brightness-7 
-        name: Switch to light mode
+        name: Переключиться на тёмный режим
 
-      primary: blue grey
+      primary: grey
+      accent: light blue
        
     # Palette toggle for dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       toggle:
         icon: material/brightness-4
-        name: Switch to dark mode
+        name: Переключиться на светлый режим
 
-      primary: blue grey
+      primary: black
+      accent: light blue
+      
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/AnhyDev
+      
+    - icon: fontawesome/brands/x-twitter 
+      link: https://x.com/AnhyDev
+      
+    - icon: fontawesome/brands/discord 
+      link: https://discord.gg/ubkyHWuSzD
+
+copyright: Copyright &copy; 2015 - 2024 Anhydrite (ANHY)
+
+repo_url: https://github.com/AnhyDev/AnhyFamily
+
+
 nav:
-  - Home: index.md
-  - Команды:
+  - Home: README.md
+  - КОМАНДИ:
     - Команды и Управление: commands.md
-  - Персонализация:
+  - ПЕРСОНАЛІЗАЦІЯ:
     - Пол Игрока: gender.md
     - "Имя и Фамилия": names.md
-  - "Семья":
+  - "СЕМЬЯ":
     - Брак: marry.md
     - Усыновление: adopt.md
     - Разрыв Семейных Отношений: separate.md
     - Информационный Блок: info.md
-  - Семейные Функции:
+  - СЕМЕЙНЫЕ ФУНКЦИИ:
     - Семейный Префикс: prefix.md
     - Семейный Чат: chat.md
     - Семейный Дом: home.md
     - Семейный Сундук: chest.md
-  - Дополнительно:
+  - ПЛАТЕЖИ:
+    - Оплата в Виртуальной Валюте: vault.md
+    - Оплата в Предметах: items.md
+    - Оплата в Криптовалюте: crypto.md
+  - ДОПОЛНИТЕЛЬНО:
     - Обнимашки: hugs.md
     - Конфигурационный Файл: config.md
     - Плейсхолдеры: placeholders.md
+    - Разрешения: permissions.md
