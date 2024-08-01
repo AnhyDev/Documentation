@@ -1,0 +1,86 @@
+site_name: ANHYDEV
+theme:
+  name: 'material'
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  
+  font:
+    text: Ubuntu
+  
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.footer
+    - navigation.expand
+    - navigation.top
+    - navigation.tabs
+    
+  palette: 
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: grey
+      accent: light blue
+       
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: black
+      accent: light blue
+      
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/AnhyDev
+      
+    - icon: fontawesome/brands/x-twitter 
+      link: https://x.com/AnhyDev
+      
+    - icon: fontawesome/brands/discord 
+      link: https://discord.gg/ubkyHWuSzD
+
+copyright: Copyright &copy; 2015 - 2024 Anhydrite (ANHY)
+
+repo_url: https://github.com/AnhyDev/AnhyFamily
+
+nav:
+  - Home: README.md
+  - ANHYLIBAPI:
+    - AnhyLibAPI: anhylibapi/README.md
+    - Details: anhylibapi/details.md
+    - Usage: anhylibapi/usage.md
+  - ANHYFAMILY:
+    - AnhyFamily: anhyfamily/README.md
+    - КОМАНДИ:
+        - Команди та Керування: anhyfamily/commands.md
+    - ПЕРСОНАЛІЗАЦІЯ:
+        - Стать Гравця: anhyfamily/gender.md
+        - "Ім'я та Прізвище": anhyfamily/names.md
+    - "СІМ'Я":
+      - Одруження: anhyfamily/marry.md
+      - Усиновлення: anhyfamily/adopt.md
+      - Розірвання Родинних Стосунків: anhyfamily/separate.md
+      - Інформаційний Блок: anhyfamily/info.md
+    - СІМЕЙНІ ФУНКЦІЇ:
+      - Сімейний Префікс: anhyfamily/prefix.md
+      - Сімейний Чат: anhyfamily/chat.md
+      - Сімейний Хом: anhyfamily/home.md
+      - Сімейна Скриня: anhyfamily/chest.md
+    - ПЛАТЕЖІ:
+      - Оплата в Віртуальній Валюті: anhyfamily/vault.md
+      - Оплата в Предметах: anhyfamily/items.md
+      - Оплата в Криптовалюті: anhyfamily/crypto.md
+    - ДОДАТКОВО:
+      - Обнімашки: anhyfamily/hugs.md
+      - Конфігураційний Файл: anhyfamily/config.md
+      - Плейсхолдери: anhyfamily/placeholders.md
+      - Дозволи: anhyfamily/permissions.md
