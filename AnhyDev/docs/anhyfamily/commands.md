@@ -1,36 +1,33 @@
-#### Команди
-Плагін AnhyFamily дозволяє гравцям створювати та керувати сім'ями у грі Minecraft, пропонуючи широкий спектр можливостей та функцій. Нижче наведено перелік основних команд, доступних у плагіні, та короткий опис їхнього призначення.
+The AnhyFamily plugin allows players to create and manage families in Minecraft, offering a wide range of features and capabilities. Below is a list of the main commands available in the plugin and a brief description of their purpose.
 
-#### Команди адміністратора
-- **/anhyfam** (псевдоніми: /anhyfamily, /afam)  
-  Команди, які доступні для використання з консолі або гравцям з адміністративними правами.
+#### Administrator Commands
+- **/anhyfam** (aliases: /anhyfamily, /afam)  
+  Commands available for use from the console or by players with administrative rights.
 
-#### Команди для гравців
-- **/gender** (псевдоніми: /identity, /gen)  
-  Команди для зміни або встановлення статі гравця.
+#### Player Commands
+- **/gender** (aliases: /identity, /gen)  
+  Commands for changing or setting the player's gender.
 
-- **/family** (псевдоніми: /fam)  
-  Набір команд для налаштувань профілю гравця, взаємодії з сім'єю та отримання сімейної інформації.
+- **/family** (aliases: /fam)  
+  A set of commands for configuring the player's profile, interacting with the family, and retrieving family information.
 
-- **/marry** (псевдоніми: /married)  
-  Команди для одруження гравців.
+- **/marry** (aliases: /married)  
+  Commands for marrying players.
 
-- **/adoption** (псевдоніми: /adopt)  
-  Команди для усиновлення.
+- **/adoption** (aliases: /adopt)  
+  Commands for adoption.
 
-- **/fhome** (псевдоніми: /familyhome, /fh)  
-  Команди для роботи з сімейними точками дому.
+- **/fhome** (aliases: /familyhome, /fh)  
+  Commands for working with family home points.
 
-- **/fchat** (псевдоніми: /familychat, /fc)  
-  Команди для роботи з сімейними чатами.
+- **/fchat** (aliases: /familychat, /fc)  
+  Commands for managing family chats.
 
-- **/fchest** (псевдоніми: /familychest, /ft)  
-  Команди для роботи з сімейними скринями.
+- **/fchest** (aliases: /familychest, /ft)  
+  Commands for managing family chests.
 
-- **/fhugs** (псевдоніми: /familyhugs, /hugs)  
-  Команди для встановлення дозволів на обійми та інших дій, пов'язаних з обіймами.
+- **/fhugs** (aliases: /familyhugs, /hugs)  
+  Commands for setting hug permissions and other actions related to hugging.
 
-- **/fprefix** (псевдоніми: /familyprefix, /prefix)  
-  Команди для роботи з сімейними префіксами.
-
-
+- **/fprefix** (aliases: /familyprefix, /prefix)  
+  Commands for managing family prefixes.

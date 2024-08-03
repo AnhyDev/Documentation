@@ -1,70 +1,71 @@
-Сімейна скриня – це віртуальна скриня розміром на 54 слоти, де сім'я та члени родини можуть зберігати речі та мати спільний доступ до неї. Члени родини – це батьки та діти подружжя. Одночасно користуватися скринею може лише один гравець; інший отримає доступ лише після того, як перший гравець закриє скриню.
+The family chest is a virtual chest with 54 slots where the family and its members can store items and have shared access. Family members include the parents and children of the couple. Only one player can use the chest at a time; another player will gain access only after the first player closes the chest.
 
-#### Команди для Встановлення та Дозволів
+#### Commands for Setting and Permissions
 
 1. **/fchest set**  
-   Встановлення скрині за координатами блоку, на який дивиться гравець. Лише певні блоки, вказані у конфігурації, можуть використовуватися як сімейна скриня. Інший член подружжя отримає інтерактивне повідомлення для підтвердження встановлення скрині або відмови.
+   Sets the chest at the coordinates of the block the player is looking at. Only certain blocks specified in the configuration can be used as the family chest. The other spouse will receive an interactive message to confirm or refuse the chest setup.
 
 2. **/fchest accept**  
-   Підтвердити встановлення скрині.
+   Confirm the chest setup.
 
 3. **/fchest refuse**  
-   Відмовити у встановленні скрині.
-   
-Важливо зазначити, що блок сімейної скрині не може бути зруйнованим. Щоб зламати блок скрині, потрібно спочатку перемістити скриню на інший блок за іншими координатами, використовуючи команду /fchest set на новому місці.
+   Refuse the chest setup.
 
-#### Персональні та Групові Дозволи
+It's important to note that the family chest block cannot be destroyed. To break the chest block, you must first move the chest to another block at different coordinates by using the `/fchest set` command at the new location.
 
-Команди для керування доступом до сімейної скрині аналогічні командам для сімейного чату та хому:
+#### Personal and Group Permissions
+
+Commands for managing access to the family chest are similar to those for the family chat and home:
 
 1. **/fchest access `<PlayerName>` `<allow|deny|default>`**  
-   Встановлення персонального доступу для члена родини. Можливо дозволити, заборонити або встановити доступ за замовчуванням. Немає можливості надати доступ гравцю, який не є членом родини (тобто не є батьком або дитиною хоча б одного з подружжя).
+   Sets personal access for a family member. You can allow, deny, or set default access. It is not possible to grant access to a player who is not a family member (i.e., not a parent or child of either spouse).
 
 2. **/fchest default `<children|parents>` `<allow|deny>`**  
-   Встановлення групового доступу для всіх дітей або батьків. Персональні дозволи мають вищий пріоритет над груповими. Наприклад, якщо дітям заборонено доступ до скрині, але одному з них встановити персональний дозвіл, то він матиме доступ.
+   Sets group access for all children or parents. Personal permissions take priority over group permissions. For example, if children are denied access to the chest, but one child is given personal permission, that child will have access.
 
 3. **/fchest check `<PlayerName>`**  
-   Перевірка, чи має даний гравець доступ до сімейної скрині. Враховується як персональний доступ, так і груповий.
+   Checks whether the specified player has access to the family chest. Both personal and group access are considered.
 
 4. **/fchest defaultcheck `<children|parents>`**  
-   Перевірка дозволу для групи дітей або батьків до сімейної скрині.
+   Checks the access permission for the group of children or parents to the family chest.
 
-Усі відповіді на ці команди є інтерактивними повідомленнями з клікабельними елементами, що дозволяють змінювати налаштування без введення команд.
+All responses to these commands are interactive messages with clickable elements that allow you to change settings without entering commands.
 
-#### Використання Сімейної Скрині
+#### Using the Family Chest
 
 1. **/fchest**  
-   Відкриття сімейної скрині. Цю команду можуть виконувати подружжя та члени родини, яким це дозволено.
+   Opens the family chest. This command can be executed by the couple and family members who have permission.
 
 2. **/fchest #`<PREFIX>`**  
-   Відкриття сімейної скрині за префіксом. `<PREFIX>` – унікальний префікс сім'ї, до скрині якої відбувається доступ.
+   Opens the family chest by prefix. `<PREFIX>` is the unique prefix of the family whose chest is being accessed.
 
 3. **/fchest @`<PlayerName>`**  
-   Відкриття сімейної скрині за нікнеймом. `<PlayerName>` – гравець, до сімейної скрині якого відбувається доступ.
+   Opens the family chest by player nickname. `<PlayerName>` is the player whose family chest is being accessed.
 
-4. **Клік по блоку**  
-   Сімейна скриня також може бути відкрита кліком по ній, якщо це не заборонено в конфігурації.
+4. **Clicking on the Block**  
+   The family chest can also be opened by clicking on it if this is not disabled in the configuration.
 
-#### Налаштування Конфігурації
+#### Configuration Settings
 
-У конфігурації плагіна можна налаштувати способи відкриття скрині, дистанцію для взаємодії з нею та обмеження по світу:
+In the plugin configuration, you can set up how the chest is opened, the interaction distance, and world limitations:
 
 ```yaml
-# Використання сімейної скрині
+# Using the family chest
 chest:
-  # Дозволити команду (/fchest) для відкриття скрині
+  # Allow the command (/fchest) to open the chest
   command: true
-  # Дистанція для команди (0 - без обмежень)
+  # Distance for the command (0 - no limit)
   distance: 0
-  # Якщо без обмежень, то лише у цьому світі
+  # If unlimited, then only in this world
   world: false
-  # Дозволити відкривати скриню кліком
+  # Allow opening the chest by clicking
   click: true
-  # Список блоків у форматі "Material", які можна використовувати як скриню
+  # List of blocks in "Material" format that can be used as a chest
   material:
     - CHEST
     - BARREL
-  # Дистанція від скрині до точки хому для встановлення та взаємодії
+  # Distance from the chest to the home point for setting and interaction
   distance_to_home: 20
 ```
 
+This configuration allows you to customize how the family chest works, including the blocks that can be used, the distance restrictions, and how players can interact with the chest.

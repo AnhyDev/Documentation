@@ -1,63 +1,61 @@
-### Про усиновлення
-
-У плагіні AnhyFamily гравці можуть усиновлювати або удочеряти інших гравців. За замовчуванням це можуть робити лише чоловік та жінка, але це можна змінити у конфігурації:
+In the AnhyFamily plugin, players can adopt other players. By default, only a male and female couple can adopt, but this can be changed in the configuration:
 
 ```yaml
-# Дозволити усиновлення для небінарних та невизначених статей
+# Allow adoption for non-binary and undefined genders
 non_binary_adoption: false
 ```
 
-#### Вимоги до Усиновлення
+#### Adoption Requirements
 
-1. **Усиновлювачі:** Усиновлювати гравця може пара, яка не обов'язково повинна бути подружжям. Це можуть бути гравці, які мають свої власні сім'ї або взагалі не одружені. Обмежень щодо сімейного статусу усиновлювачів немає.
-2. **Родинні зв'язки:** Усиновлення неможливе, якщо між кимось із усиновлювачів та дитиною вже є родинні зв'язки (нащадки, предки).
-3. **Оплата за усиновлення:** Якщо вказано у конфігурації, за усиновлення може зніматися оплата.
+1. **Adopters:** Adoption can be initiated by a pair of players who do not necessarily have to be a married couple. These can be players with their own families or those who are not married at all. There are no restrictions on the marital status of the adopters.
+2. **Family Ties:** Adoption is not possible if there are already family ties (such as ancestors or descendants) between any of the adopters and the child.
+3. **Adoption Fee:** If specified in the configuration, a fee may be charged for adoption.
 
 ```yaml
 prices:
-  # Віртуальні гроші, предмети, криптовалюта (ще не реалізовано)
+  # Virtual money, items, cryptocurrency (not yet implemented)
   currency: VIRTUAL
   marriage: 0
   divorce: 0
   adoption: 0
 ```
-Оплата за усиновлення знімається з гравця в момент, коли він пропонує усиновлення, тобто виконує команду `/adoption invite <PlayerName>`. Якщо коштів недостатньо, пропозиція усиновлення не буде відправлена. У випадку, якщо усиновлення не відбудеться, наприклад, якщо усиновлюваний відмовився, кошти не повертаються.
+The adoption fee is deducted from the player when they propose adoption using the command `/adoption invite <PlayerName>`. If there are insufficient funds, the adoption proposal will not be sent. If the adoption does not proceed, such as if the prospective adoptee declines, the fee is not refunded.
 
-#### Процес Усиновлення
+#### Adoption Process
 
-1. **Запрошення до усиновлення:** Обоє майбутніх батьків мають виконати команду:
+1. **Adoption Invitation:** Both future parents must execute the command:
    ```
    /adoption invite `<PlayerName>`
    ```
-   де `<PlayerName>` – це усиновлюваний гравець. Усиновлюваний отримує повідомлення із запитом на згоду або відмову.
+   where `<PlayerName>` is the player being adopted. The adoptee receives a message with a prompt to accept or decline.
 
-2. **Прийняття або відмова:** Усиновлюваний гравець може погодитися або відмовитися за допомогою команд:
+2. **Acceptance or Decline:** The prospective adoptee can accept or decline the adoption using the commands:
    ```
    /adoption accept
    ```
-   або
+   or
    ```
    /adoption decline
    ```
 
-3. **Відкликання пропозиції:** Якщо один із усиновлювачів хоче відкликати свою пропозицію, він може використати команду:
+3. **Canceling the Proposal:** If one of the adopters wants to withdraw their proposal, they can use the command:
    ```
    /adoption cancel
    ```
 
-4. **Завершення усиновлення:** Усиновлення відбудеться лише після того, як обоє батьків відправлять пропозицію і усиновлюваний гравець прийме цю пропозицію.
+4. **Finalizing the Adoption:** The adoption will only be completed after both parents send the proposal and the adoptee accepts it.
 
-#### Примусове Усиновлення
+#### Forced Adoption
 
-Примусове усиновлення доступне через консоль або гравцям з правами адміністратора. У цьому випадку усиновлення відбувається не парою, а одним гравцем.
+Forced adoption is available through the console or to players with administrative rights. In this case, adoption is done by a single player rather than a pair.
 
-- **Команда:**
+- **Command:**
   ```
   /anhyfam forceadopt `<adoptedPlayer>` `<adopterPlayer>`
   ```
-  де `adoptedPlayer` – усиновлюваний гравець, а `adopterPlayer` – усиновлювач. Примусове усиновлення можливе лише якщо у дитини ще немає батьків або немає відповідно батька чи матері.
+  where `adoptedPlayer` is the player being adopted, and `adopterPlayer` is the adopter. Forced adoption is only possible if the child does not already have parents or does not have a father or mother.
 
-#### Після Усиновлення
+#### After Adoption
 
-- Якщо у батьків або дитини є власні сім'ї, вони будуть додані один одному у сімейні об'єкти.
-- Інформація про нову сім'ю буде збережена у відповідних сімейних об'єктах, включаючи доступ до сімейного чату, дому та скрині.
+- If the parents or the child have their own families, they will be added to each other's family objects.
+- Information about the new family will be saved in the corresponding family objects, including access to the family chat, home, and chest.

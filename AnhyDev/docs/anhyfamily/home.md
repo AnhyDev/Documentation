@@ -1,58 +1,56 @@
-Сімейний хом у плагіні AnhyFamily – це локація, до якої можуть телепортуватися сімейна пара та члени родини, які мають відповідні дозволи. Члени родини – це батьки та діти подружжя.
+The family home in the AnhyFamily plugin is a location that the married couple and family members with the appropriate permissions can teleport to. Family members include the parents and children of the couple.
 
-#### Команди для Встановлення та Дозволів
+#### Commands for Setting and Permissions
 
 1. **/fhome set**  
-   Встановлення точки хому за координатами гравця, що виконав команду. Інший член подружжя отримає інтерактивне повідомлення для підтвердження встановлення точки або відмови.
+   Sets the home point at the coordinates of the player who executes the command. The other spouse will receive an interactive message to either confirm or decline the home point setting.
 
    - **/fhome accept**  
-     Підтвердити встановлення точки хому.
+     Confirm the setting of the home point.
 
    - **/fhome refuse**  
-     Відмовити у встановленні точки хому.
+     Refuse the setting of the home point.
 
-Точку хому можна змінювати не будь-коли, а після закінчення періоду затримки, який вказано у конфігурації.
+The home point can only be changed after a cooldown period specified in the configuration.
 
-#### Персональні та Групові Дозволи
+#### Personal and Group Permissions
 
-Команди для керування доступом до сімейного хому аналогічні командам для сімейного чату:
+Commands for managing access to the family home are similar to those for the family chat:
 
 1. **/fhome access `<PlayerName>` `<allow|deny|default>`**  
-   Встановлення персонального доступу для члена родини. Можливо дозволити, заборонити або встановити доступ за замовчуванням. Немає можливості надати доступ гравцю, який не є членом родини (тобто не є батьком або дитиною хоча б одного з подружжя).
+   Sets personal access for a family member. You can allow, deny, or set default access. It is not possible to grant access to a player who is not a family member (i.e., not a parent or child of either spouse).
 
 2. **/fhome default `<children|parents>` `<allow|deny>`**  
-   Встановлення групового доступу для всіх дітей або батьків. Персональні дозволи мають вищий пріоритет над груповими. Наприклад, якщо дітям заборонено доступ до хому, але одному з них встановити персональний дозвіл, то він матиме доступ.
+   Sets group access for all children or parents. Personal permissions take priority over group permissions. For example, if children are denied access to the home, but one child is given personal permission, that child will have access.
 
 3. **/fhome check `<PlayerName>`**  
-   Перевірка, чи має даний гравець доступ до сімейного хому. Враховується як персональний доступ, так і груповий.
+   Checks whether the specified player has access to the family home. Both personal and group access are considered.
 
 4. **/fhome defaultcheck `<children|parents>`**  
-   Перевірка дозволу для групи дітей або батьків до сімейного хому.
+   Checks the access permission for the group of children or parents to the family home.
 
-Усі відповіді на ці команди є інтерактивними повідомленнями з клікабельними елементами, що дозволяють змінювати налаштування без введення команд.
+All responses to these commands are interactive messages with clickable elements that allow you to change settings without entering commands.
 
-#### Телепортація на Сімейний Хом
+#### Teleporting to the Family Home
 
 1. **/fhome**  
-   Телепортація на сімейний хом. Цю команду можуть виконувати подружжя та члени родини, яким це дозволено.
+   Teleports to the family home. This command can be executed by the couple and family members who have permission.
 
 2. **/fhome #`<PREFIX>`**  
-   Телепортація на сімейний хом за префіксом. `<PREFIX>` – унікальний префікс сім'ї, до хому якої відбувається телепортація.
+   Teleports to the family home by prefix. `<PREFIX>` is the unique prefix of the family whose home is being teleported to.
 
 3. **/fhome @`<PlayerName>`**  
-   Телепортація на сімейний хом за нікнеймом. `<PlayerName>` – гравець, до сімейного хому якого відбувається телепортація.
+   Teleports to the family home by player nickname. `<PlayerName>` is the player whose family home is being teleported to.
 
-#### Налаштування Конфігурації
+#### Configuration Settings
 
-У конфігурації плагіна можна вказати, чи дозволено телепортуватися на сімейний хом лише з того світу, у якому він встановлений, чи з будь-якого світу, а також встановити тайм-аут перед зміною точки хому:
+In the plugin configuration, you can specify whether teleportation to the family home is only allowed from the world where it is set or from any world, as well as set the timeout before the home point can be changed:
 
 ```yaml
-# Використання команди /fhome (/familyhome)
+# Use of the /fhome (/familyhome) command
 home:
-  # Тайм-аут перед зміною точки сімейного хому, вказати в хвилинах
+  # Timeout before changing the family home point, specified in minutes
   timeout: 1440
-  # Дозволено телепортуватися на сімейний хом лише у світі, де він встановлений
+  # Allow teleporting to the family home only in the world where it is set
   world: false
 ```
-
-

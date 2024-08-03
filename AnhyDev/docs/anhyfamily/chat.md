@@ -1,41 +1,39 @@
-Сімейний чат у плагіні AnhyFamily дозволяє сімейній парі та членам родини, які мають відповідні дозволи, спілкуватися між собою. Команди для керування доступом та використання сімейного чату доступні тільки для подружжя.
+The family chat in the AnhyFamily plugin allows the couple and family members with appropriate permissions to communicate with each other. The commands for managing access and using the family chat are only available to the couple.
 
-#### Команди для Керування Доступом
+#### Commands for Managing Access
 
 1. **/fchat access `<PlayerName>` `<allow|deny|default>`**  
-   Встановлення персонального доступу для члена родини. Можливо дозволити, заборонити або встановити доступ за замовчуванням. Немає можливості надати доступ гравцю, який не є членом родини (тобто не є батьком або дитиною хоча б одного з подружжя).
+   Sets personal access for a family member. You can allow, deny, or set default access. It is not possible to grant access to a player who is not a family member (i.e., not a parent or child of either spouse).
 
 2. **/fchat default `<children|parents>` `<allow|deny>`**  
-   Встановлення групового доступу для всіх дітей або батьків. Персональні дозволи мають вищий пріоритет над груповими. Наприклад, якщо дітям заборонено доступ до чату, але одному з них встановити персональний дозвіл, то він матиме доступ.
+   Sets group access for all children or parents. Personal permissions take priority over group permissions. For example, if children are denied access to the chat, but one child is given personal permission, that child will have access.
 
 3. **/fchat check `<PlayerName>`**  
-   Перевірка, чи має даний гравець доступ до сімейного чату. Враховується як персональний доступ, так і груповий.
+   Checks whether the specified player has access to the family chat. Both personal and group access are considered.
 
 4. **/fchat defaultcheck `<children|parents>`**  
-   Перевірка дозволу для групи дітей або батьків до сімейного чату.
+   Checks the access permission for the group of children or parents to the family chat.
 
-Усі відповіді на ці команди є інтерактивними повідомленнями з клікабельними елементами, що дозволяють змінювати налаштування без введення команд.
+All responses to these commands are interactive messages with clickable elements that allow you to change settings without entering commands.
 
-#### Використання Сімейного Чату
+#### Using the Family Chat
 
-1. **/fchat `<текст повідомлення>`**  
-   Надсилання повідомлення у власний сімейний чат. Повідомлення бачать всі члени родини, які мають доступ до чату.
+1. **/fchat `<message text>`**  
+   Sends a message to your own family chat. The message is visible to all family members who have access to the chat.
 
-2. **/fchat #`<PREFIX>` `<текст повідомлення>`**  
-   Надсилання повідомлення у сімейний чат за префіксом. PREFIX – унікальний префікс сім'ї, у чат якої надсилається повідомлення. Гравець може писати лише у ті сімейні чати, в які йому дозволено.
+2. **/fchat #`<PREFIX>` `<message text>`**  
+   Sends a message to a family chat by prefix. `<PREFIX>` is the unique prefix of the family whose chat the message is being sent to. A player can only send messages to family chats they have access to.
 
-3. **/fchat @`<PlayerName>` `<текст повідомлення>`**  
-   Надсилання повідомлення у сімейний чат за нікнеймом. PlayerName – гравець, у чат сім'ї якого потрібно відправити повідомлення. Це альтернатива використанню префіксу.
+3. **/fchat @`<PlayerName>` `<message text>`**  
+   Sends a message to a family chat by player nickname. `<PlayerName>` is the player whose family chat the message is being sent to. This is an alternative to using a prefix.
 
-4. **/fchat `<пишу гравцю>` @`<PlayerName>` `<текст повідомлення>`**  
-   Тегання гравця у сімейному чаті. Гравець PlayerName отримає звукове та візуальне повідомлення про те, що його тегнули.
+4. **/fchat `<message text>` @`<PlayerName>`**  
+   Tags a player in the family chat. The player `<PlayerName>` will receive an audio and visual notification that they have been tagged.
 
-#### Інтерактивні Елементи
+#### Interactive Elements
 
-Усі елементи повідомлень у сімейному чаті, окрім самого тексту повідомлення, є інтерактивними. Це дозволяє вставляти певні команди та інші дії у командний рядок за допомогою простих кліків по цим елементам.
+All elements of messages in the family chat, except the message text itself, are interactive. This allows certain commands and other actions to be inserted into the command line with simple clicks on these elements.
 
-#### Доступ за Замовчуванням
+#### Default Access
 
-Сімейна пара має доступ до власного сімейного чату за замовчуванням, і цей доступ не може бути заборонений. Це забезпечує постійний канал комунікації між подружжям, незалежно від інших налаштувань доступу для членів родини.
-
-
+The couple has access to their own family chat by default, and this access cannot be revoked. This ensures a constant communication channel between the couple, regardless of other access settings for family members.

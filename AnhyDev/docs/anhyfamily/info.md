@@ -1,66 +1,64 @@
-Команда **/family info** дозволяє отримати детальну інформацію про гравця та його сім'ю. Ця команда виводить інтерактивне повідомлення, де можна обрати, яку інформацію хочете переглянути: профіль гравця чи його сімейне дерево. Навівши на відповідний пункт, ви побачите потрібну інформацію у спливаючому повідомленні, а клікнувши по ньому, дана інформація буде роздрукована в чаті у вигляді повідомлення для гравця.
+The **/family info** command provides detailed information about a player and their family. This command displays an interactive message where you can choose to view either the player's profile or their family tree. By hovering over the respective option, you'll see the desired information in a tooltip, and by clicking on it, the information will be printed in the chat as a message for the player.
 
-#### Використання команди
+#### Using the Command
 
 - **/family info**  
-  Якщо команда виконується без додаткових параметрів, буде виведена інформація про гравця, який виконав команду.
+  If the command is executed without additional parameters, information about the player who executed the command will be displayed.
 
 ```
 /family info <PlayerName>
 ```
-  Додайте нікнейм, щоб отримати інформацію про вказаного гравця.
+  Add a player's nickname to get information about the specified player.
 
-### Профіль Гравця
+### Player Profile
 
-Команда **/family profile** (або вибір відповідного пункту з команди **/family info**) виводить детальну інформацію про гравця, включаючи його стать, ім'я та прізвище, а також інформацію про близьких родичів: подружжя, батьків та дітей.
+The **/family profile** command (or selecting the corresponding option from the **/family info** command) displays detailed information about the player, including their gender, name, surname, and information about close relatives: spouse, parents, and children.
 
-Приклад інтерактивного профілю:
+Example of an interactive profile:
 
 ```
 =========================================
- (♂) Корвін Амберський (Korvinius)
+ (♂) Korvin Ambersky (Korvinius)
 -----------------------------------------
- Партнер: відсутній 
- Батько: невідомий 
- Матір: (♀) Дара Хаос (Dara)
- Діти: 
-  Син: (♂) Нацио Армаріус (NaZZyyOO)
-  Дочка: (♀) Ліра Амберська (Lyra)
+ Partner: None 
+ Father: Unknown 
+ Mother: (♀) Dara Chaos (Dara)
+ Children: 
+  Son: (♂) Nacio Armarius (NaZZyyOO)
+  Daughter: (♀) Lyra Ambersky (Lyra)
 =========================================
 ```
 
-Клік по будь-кому з гравців, вказаних у профілі, викликає відповідну інформацію про цього гравця.
+Clicking on any player listed in the profile will bring up the relevant information about that player.
 
-### Сімейне Дерево
+### Family Tree
 
-Команда **/family tree** (або вибір відповідного пункту з команди **/family info**) виводить сімейне дерево гравця, включаючи предків та нащадків. Сімейне дерево також є інтерактивним: клік по будь-кому, хто вказаний у сімейному дереві, виведе сімейне дерево цього гравця.
+The **/family tree** command (or selecting the corresponding option from the **/family info** command) displays the player's family tree, including ancestors and descendants. The family tree is also interactive: clicking on anyone listed in the family tree will display that player's family tree.
 
-Приклад сімейного дерева:
+Example of a family tree:
 
 ```
-   ┌─ (♀) Ліра Амберська (Lyra)
+   ┌─ (♀) Lyra Ambersky (Lyra)
      ┌─ (?) (Redgit)
-   ┌─ (♂) Нацио Армаріус (NaZZyyOO)
- ┌─ Нащадки 
-  Сімейне дерево (♂) Корвін Амберський (Korvinius)
- └─ Предки 
-   └─ (♀) Дара Хаос (Dara)
+   ┌─ (♂) Nacio Armarius (NaZZyyOO)
+ ┌─ Descendants 
+  Family Tree (♂) Korvin Ambersky (Korvinius)
+ └─ Ancestors 
+   └─ (♀) Dara Chaos (Dara)
 ```
 
-### Використання команд
+### Command Usage
 
 - **/family profile**  
-  Викликає інформацію про профіль гравця. Можна додати нікнейм для отримання інформації про іншого гравця:
+  Displays the player's profile information. You can add a nickname to get information about another player:
 
 ```
   /family profile <PlayerName>
 ```
 
 - **/family tree**  
-  Викликає інформацію про сімейне дерево гравця. Можна додати нікнейм для отримання інформації про сімейне дерево іншого гравця:
+  Displays the player's family tree. You can add a nickname to get information about another player's family tree:
 
 ```
   /family tree <PlayerName>
 ```
-
-

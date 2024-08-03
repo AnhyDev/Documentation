@@ -1,4 +1,4 @@
-Плагін AnhyFamily дозволяє використовувати предмети як платіжний засіб для таких подій, як одруження, усиновлення чи розлучення. Цей функціонал стає доступним, якщо у конфігураційному файлі плагіна обрано наступну опцію:
+The AnhyFamily plugin allows using items as a payment method for events such as marriage, adoption, or divorce. This functionality becomes available if the following option is selected in the plugin's configuration file:
 
 ```yaml
 prices:
@@ -6,56 +6,54 @@ prices:
   currency: ITEM
 ```
 
-При цьому плагін шукатиме інформацію про вартість послуг у предметах. Ціни в предметах зберігаються у файлі `item_prices.yml` в папці плагіна. Цей файл завантажується в пам'ять при включенні сервера. Якщо файл відсутній, вартість у предметах дорівнює нулю, тобто послуги надаються безкоштовно. Так само, якщо у файлі відсутній запис про конкретну послугу, вона також вважається безкоштовною. Тільки ті послуги, для яких є відповідний запис у файлі, будуть мати вказану вартість у предметах.
+When this option is set, the plugin will look for information about the cost of services in items. The item prices are stored in the `item_prices.yml` file within the plugin folder. This file is loaded into memory when the server starts. If the file is missing, the item cost defaults to zero, meaning the services are provided for free. Similarly, if there is no entry for a specific service in the file, that service is also considered free. Only those services with a corresponding entry in the file will have the specified item cost.
 
-#### Команди для Управління Цінами в Предметах
+#### Commands for Managing Item Prices
 
-Гравець з правами адміністратора може додавати, змінювати або видаляти предмети вартості послуг за допомогою наступних команд:
+A player with administrative permissions can add, modify, or remove items as service prices using the following commands:
 
 - **/anhyfam item add `<key>`**  
-  Додає або змінює предмет для оплати послуг, де `<key>` - це ключ, що відповідає певній події (наприклад, `marriage`, `divorce`, `adoption`). Гравець повинен тримати предмет у руці при виконанні команди.
+  Adds or changes the item used for service payments, where `<key>` corresponds to a specific event (e.g., `marriage`, `divorce`, `adoption`). The player must hold the item in hand when executing the command.
 
 - **/anhyfam item clear**  
-  Очищує файл `item_prices.yml`, видаляючи всі записи про предмети вартості послуг.
+  Clears the `item_prices.yml` file, removing all entries for service item prices.
 
 - **/anhyfam item get `<key>`**  
-  Повертає предмет, який відповідає вказаному ключу, у інвентар гравця або викидає його, якщо інвентар повний.
+  Retrieves the item corresponding to the specified key into the player's inventory or drops it if the inventory is full.
 
 - **/anhyfam item remove `<key>`**  
-  Видаляє предмет, який відповідає вказаному ключу, з файлу `item_prices.yml`.
+  Removes the item corresponding to the specified key from the `item_prices.yml` file.
 
-#### Приклади Використання Команд
+#### Examples of Command Usage
 
-1. **Додавання або Зміна Предмета**
+1. **Adding or Modifying an Item**
 
-   Гравець з правами адміністратора тримає предмет у руці та виконує команду:
-```
+   An administrator holds the item in hand and executes the command:
+   ```
    /anhyfam item add marriage
-```
-   Після успішного виконання команди, предмет буде додано або змінено для ключа `marriage`.
+   ```
+   After successfully executing the command, the item will be added or updated for the `marriage` key.
 
-2. **Очищення Файлу Предметів**
+2. **Clearing the Item File**
 
-   Для очищення всіх записів про предмети вартості послуг виконайте команду:
-```
+   To clear all entries for service item prices, execute the command:
+   ```
    /anhyfam item clear
-```
-   Успішне виконання команди видалить файл `item_prices.yml`.
+   ```
+   Successfully executing the command will delete the `item_prices.yml` file.
 
-3. **Отримання Предмета за Ключем**
+3. **Retrieving an Item by Key**
 
-   Щоб отримати предмет, який відповідає певному ключу, виконайте команду:
-```
+   To retrieve the item corresponding to a specific key, execute the command:
+   ```
    /anhyfam item get divorce
-```
-   Якщо предмет існує для ключа `divorce`, він буде додано у ваш інвентар або викинуто біля вас.
+   ```
+   If an item exists for the `divorce` key, it will be added to your inventory or dropped nearby if the inventory is full.
 
-4. **Видалення Предмета за Ключем**
+4. **Removing an Item by Key**
 
-   Для видалення предмета, який відповідає певному ключу, виконайте команду:
-```
+   To remove the item corresponding to a specific key, execute the command:
+   ```
    /anhyfam item remove adoption
-```
-   Після успішного виконання команди, предмет буде видалено з файлу `item_prices.yml`.
-
-
+   ```
+   After successfully executing the command, the item will be removed from the `item_prices.yml` file.

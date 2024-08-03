@@ -1,38 +1,37 @@
-Плагін AnhyFamily надає можливість розірвати родинні стосунки між гравцями. Цей процес може включати розлучення, розрив відносин з окремими членами сім'ї або з усіма дітьми чи батьками. Погодження від інших гравців не потрібне.
+The AnhyFamily plugin provides the ability to sever family relationships between players. This process can include divorce, breaking ties with individual family members, or cutting off all ties with children or parents. No consent from other players is required.
 
-#### Розлучення
+#### Divorce
 
 - **/family divorce**  
-  Ця команда розлучає подружжя, знищуючи сімейний об'єкт та видаляючи всі перехрестні сімейні зв'язки з іншими сімейними об'єктами подружжя. При цьому, якщо при одруженні хтось з гравців брав прізвище іншого, то йому повертається його попереднє прізвище.
+  This command divorces the spouses, destroying the family object and removing all cross-family ties with other family objects of the spouses. If a player took the other spouse's surname during marriage, it will be reverted to their previous surname.
 
-  Якщо в конфігурації плагіна вказана оплата за розлучення, то вона буде знята з гравця під час виконання команди. У випадку, якщо у гравця недостатньо коштів для оплати, розлучення не відбудеться.
+  If the plugin configuration specifies a payment for divorce, it will be deducted from the player's account when the command is executed. If the player does not have enough funds, the divorce will not proceed.
 
-#### Розрив Родинних Стосунків
+#### Severing Family Relationships
 
 - **/family separate `<PlayerName>`**  
-  Визначає ким є `<PlayerName>` (подружжям, дитиною або батьком/матір'ю). Відбувається повний розрив стосунків з цим гравцем, з взаємним видаленням з сімейних об'єктів, якщо такі існують у обох гравців.
+  Identifies who `<PlayerName>` is (spouse, child, or parent). This command fully severs the relationship with the specified player, including mutual removal from each other's family objects if they exist for both players.
 
 - **/family separate children**  
-  Повний розрив стосунків з усіма дітьми, з взаємним видаленням з сімейних об'єктів, якщо такі існують у всіх задіяних гравців.
+  Completely severs relationships with all children, including mutual removal from family objects if they exist for all involved players.
 
 - **/family separate parents**  
-  Повний розрив стосунків з усіма батьками, з взаємним видаленням з сімейних об'єктів, якщо такі існують у всіх задіяних гравців.
+  Completely severs relationships with all parents, including mutual removal from family objects if they exist for all involved players.
 
-#### Примусова Очистка Родинних Зв'язків
+#### Forced Family Relationship Clearance
 
 - **/anhyfam clearfamily player**  
-  Ця команда доступна з консолі або гравцю з правами адміністратора. Вона повністю розриває та очищує всі родинні зв'язки гравця **player**.
+  This command is available from the console or to a player with administrative rights. It fully severs and clears all family ties of the player **player**.
 
-#### Оплата за Дії
+#### Payment for Actions
 
-За певні дії може зніматися оплата, якщо це вказано у конфігурації:
+Certain actions may incur a fee if specified in the configuration:
 
 ```yaml
 prices:
-  # Віртуальні гроші, предмети, криптовалюта (ще не реалізовано)
+  # Virtual money, items, cryptocurrency (not yet implemented)
   currency: VIRTUAL
   marriage: 0
   divorce: 0
   adoption: 0
 ```
-

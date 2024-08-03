@@ -1,102 +1,101 @@
-Плагін AnhyFamily дозволяє гравцям обіймати інших гравців, якщо це дозволено налаштуваннями. Існують сімейні та персональні дозволи на обійми, що дозволяють гравцям налаштовувати можливість обіймів відповідно до своїх побажань.
+The AnhyFamily plugin allows players to hug other players, provided this feature is allowed in the settings. There are both family and personal permissions for hugging, which allow players to customize the hugging feature according to their preferences.
 
-#### Як Обіймати Інших Гравців
+#### How to Hug Other Players
 
-Для того щоб обійняти іншого гравця, вам необхідно виконати декілька умов:
+To hug another player, several conditions must be met:
 
-1. **Позиція Гравця**: Гравець повинен знаходитися у певній позиції, з нахилом голови вперед, тобто його огляд має бути спрямований вниз під кутом між 0 і 70 градусами.
-2. **Стан Гравця**: Гравець має знаходитись у стані присідання (sneaking).
-3. **Відстань**: Відстань до гравця, якого ви хочете обійняти, має бути менше 2 блоків.
-4. **Клік Правою Кнопкою Миші**: Потрібно клікнути правою кнопкою миші по гравцю, якого ви хочете обійняти.
+1. **Player Position:** The player must be in a specific position, with their head tilted forward, meaning their view should be directed downwards at an angle between 0 and 70 degrees.
+2. **Player State:** The player must be sneaking (crouching).
+3. **Distance:** The distance to the player you want to hug must be less than 2 blocks.
+4. **Right-Click:** You need to right-click on the player you want to hug.
 
-Якщо всі ці умови виконані, обійми будуть успішно виконані, за умови що обійми дозволені налаштуваннями.
+If all these conditions are met, the hug will be successfully executed, provided hugging is allowed by the settings.
 
-#### Сімейні Дозволи
+#### Family Permissions
 
-Сімейні дозволи налаштовуються за допомогою команд, аналогічних до попередніх блоків:
+Family permissions are managed through commands similar to those in previous sections:
 
 1. **/fhugs access `<PlayerName>` `<allow|deny|default>`**  
-   Встановлення персонального доступу для члена родини. Можливо дозволити, заборонити або встановити доступ за замовчуванням.
+   Sets personal access for a family member. You can allow, deny, or set default access.
 
 2. **/fhugs default `<children|parents>` `<allow|deny>`**  
-   Встановлення групового доступу для всіх дітей або батьків. Персональні дозволи мають вищий пріоритет над груповими.
+   Sets group access for all children or parents. Personal permissions take priority over group permissions.
 
 3. **/fhugs check `<PlayerName>`**  
-   Перевірка, чи має даний гравець доступ до обіймів. Враховується як персональний доступ, так і груповий.
+   Checks whether the specified player has access to hugs. Both personal and group access are considered.
 
 4. **/fhugs defaultcheck `<children|parents>`**  
-   Перевірка дозволу для групи дітей або батьків до обіймів.
+   Checks the hug permission for the group of children or parents.
 
-Усі відповіді на ці команди є інтерактивними повідомленнями з клікабельними елементами, що дозволяють змінювати налаштування без введення команд.
+All responses to these commands are interactive messages with clickable elements that allow you to change settings without entering commands.
 
-#### Персональні Дозволи
+#### Personal Permissions
 
-Можливість обіймів не обмежується лише сім'єю та членами родини. Існують також персональні дозволи для будь-яких гравців, які кожен гравець може встановити чи заборонити:
+The ability to hug is not limited to family members. There are also personal permissions for any player that each player can set or deny:
 
 1. **/fhugs allow `<PlayerName>`**  
-   Дозволити обійми для конкретного гравця.
+   Allows hugs for a specific player.
 
 2. **/fhugs deny `<PlayerName>`**  
-   Заборонити обійми для конкретного гравця.
+   Denies hugs for a specific player.
 
-Персональні дозволи та заборони мають найвищий пріоритет, навіть вищий за сімейні персональні дозволи. Це означає, що можна заборонити обійми навіть для подружжя.
+Personal permissions and denials have the highest priority, even over family personal permissions. This means you can deny hugs even to a spouse.
 
-#### Глобальні Дозволи
+#### Global Permissions
 
 1. **/fhugs allowall `<true|false>`**  
-   Встановлення глобального дозволу на обійми для всіх гравців. Якщо встановлено на `true`, обійми дозволені всім гравцям, це має вищий пріоритет за сімейні дозволи. При встановленні `true`, `denyall` автоматично змінюється на `false`.
+   Sets a global permission to allow hugs for all players. If set to `true`, hugs are allowed for all players, and this has a higher priority than family permissions. When set to `true`, `denyall` is automatically set to `false`.
 
 2. **/fhugs denyall `<true|false>`**  
-   Встановлення глобальної заборони на обійми для всіх гравців. Якщо встановлено на `true`, обійми заборонені всім гравцям, крім тих, хто має персональний дозвіл або сімейний дозвіл. При встановленні `true`, `allowall` автоматично змінюється на `false`.
+   Sets a global ban on hugs for all players. If set to `true`, hugs are denied for all players except those who have personal or family permissions. When set to `true`, `allowall` is automatically set to `false`.
 
-#### Інші Команди
+#### Other Commands
 
 1. **/fhugs remove `<PlayerName>`**  
-   Видаляє гравця зі списку персональних дозволів та заборон.
+   Removes a player from the personal permissions and denials list.
 
 2. **/fhugs list**  
-   Показує список персональних дозволів та заборон.
+   Shows a list of personal permissions and denials.
 
 3. **/fhugs globalstatus**  
-   Показує поточний статус глобального дозволу на обійми (allowall, denyall).
+   Displays the current status of the global hug permission (allowall, denyall).
 
-#### Використання Команди Без Аргументів
+#### Using the Command Without Arguments
 
-Якщо виконати команду **/fhugs** без аргументів, дивлячись на іншого гравця, ви отримаєте повідомлення з інформацією про те, чи дозволив цей гравець обійми.
+If you execute the **/fhugs** command without arguments while looking at another player, you will receive a message indicating whether that player has allowed hugs.
 
-#### Наслідки Невдалої Спроби Обіймів
+#### Consequences of a Failed Hug Attempt
 
-Якщо гравець спробує обійняти іншого гравця, який не дозволив це, він отримає незначне пошкодження та буде відкинутий на кілька блоків, імітуючи ляпас.
+If a player attempts to hug another player who has not allowed it, they will receive minor damage and be knocked back a few blocks, simulating a slap.
 
-### Приклади Використання Команд
+### Example Command Usage
 
-- **Дозволити обійми конкретному гравцю:**
+- **Allow hugs for a specific player:**
   ```
   /fhugs allow <PlayerName>
   ```
 
-- **Заборонити обійми конкретному гравцю:**
+- **Deny hugs for a specific player:**
   ```
   /fhugs deny <PlayerName>
   ```
 
-- **Встановити глобальний дозвіл на обійми для всіх:**
+- **Set a global hug permission for everyone:**
   ```
   /fhugs allowall true
   ```
 
-- **Встановити глобальну заборону на обійми для всіх:**
+- **Set a global hug ban for everyone:**
   ```
   /fhugs denyall true
   ```
 
-- **Перевірити статус глобального дозволу на обійми:**
+- **Check the global hug permission status:**
   ```
   /fhugs globalstatus
   ```
 
-- **Перевірити, чи дозволені обійми, дивлячись на іншого гравця:**
+- **Check if hugs are allowed while looking at another player:**
   ```
   /fhugs
   ```
-

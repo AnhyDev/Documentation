@@ -1,20 +1,20 @@
-Плагін AnhyFamily підтримує оплату за події, такі як одруження, усиновлення чи розлучення, за допомогою віртуальної валюти. Для активації цього способу оплати у конфігураційному файлі плагіна повинна бути обрана наступна опція:
+The AnhyFamily plugin supports payment for events such as marriage, adoption, or divorce using virtual currency. To enable this payment method, the following option must be selected in the plugin's configuration file:
 
 ```yaml
 prices:
   # VIRTUAL, ITEM, CRYPTO(not yet implemented)
   currency: VIRTUAL
-  # Налаштування для віртуальної валюти:
+  # Settings for virtual currency:
   marriage: 0
   divorce: 0
   adoption: 0
 ```
 
-Якщо встановлено `currency: VIRTUAL` і значення для певної послуги відмінне від нуля, то оплата за цю послугу буде здійснюватись у віртуальній валюті, і зніматиметься з віртуального рахунку гравця. Для забезпечення роботи цієї функції використовується плагін Vault.
+If `currency: VIRTUAL` is set and the value for a specific service is non-zero, the payment for that service will be made in virtual currency, deducted from the player's virtual account. This functionality is supported by the Vault plugin.
 
-#### Налаштування Вартості Послуг у Конфігураційному Файлі
+#### Configuring Service Costs in the Configuration File
 
-Щоб внести зміни у спосіб оплати, потрібно відредагувати конфігураційний файл плагіна, встановивши відповідну вартість для кожної послуги. Наприклад:
+To modify the payment method, you need to edit the plugin's configuration file, setting the appropriate cost for each service. For example:
 
 ```yaml
 prices:
@@ -24,25 +24,25 @@ prices:
   adoption: 75
 ```
 
-У цьому прикладі, за одруження гравець сплачуватиме 100 одиниць віртуальної валюти, за розлучення – 50 одиниць, а за усиновлення – 75 одиниць. Якщо значення встановлене на 0, послуга надається безкоштовно.
+In this example, players will pay 100 units of virtual currency for marriage, 50 units for divorce, and 75 units for adoption. If the value is set to 0, the service will be provided for free.
 
-Після внесення змін у конфігураційний файл, необхідно перезавантажити конфігурацію плагіна, щоб зміни набрали чинності. Це можна зробити за допомогою команди в консолі:
+After making changes to the configuration file, you must reload the plugin configuration to apply the changes. This can be done using the following console command:
 
 ```
 /afam reload
 ```
 
-Всі оплати за послуги відбуваються автоматично при виконанні відповідних команд для подій.
+All service payments are processed automatically when the corresponding event commands are executed.
 
-#### Важливі Примітки
+#### Important Notes
 
-1. **Плагін Vault:** Для коректної роботи системи оплати необхідно мати встановлений та налаштований плагін Vault, який забезпечує доступ до віртуальних рахунків гравців.
+1. **Vault Plugin:** The Vault plugin must be installed and configured correctly for the payment system to work, as it provides access to players' virtual accounts.
 
-2. **Перевірка Балансу:** Перед виконанням платної дії плагін перевіряє, чи достатньо коштів на віртуальному рахунку гравця. Якщо коштів недостатньо, дія не буде виконана, і гравець отримає відповідне повідомлення.
+2. **Balance Check:** Before executing a paid action, the plugin checks whether the player has sufficient funds in their virtual account. If the balance is insufficient, the action will not be performed, and the player will receive an appropriate message.
 
-3. **Зміни в Конфігурації:** Після кожної зміни у конфігураційному файлі плагіна рекомендується перевірити налаштування та перезавантажити плагін, щоб переконатися у правильності роботи всіх функцій.
+3. **Configuration Changes:** After each change to the plugin's configuration file, it is recommended to verify the settings and reload the plugin to ensure all functions work correctly.
 
-#### Приклад Конфігураційного Файлу
+#### Sample Configuration File
 
 ```yaml
 prices:
@@ -51,4 +51,3 @@ prices:
   divorce: 50
   adoption: 75
 ```
-

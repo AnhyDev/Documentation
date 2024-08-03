@@ -1,31 +1,27 @@
-### Дозволи (Permissions)
-
-Плагін AnhyFamily надає гнучку систему дозволів для керування доступом до різних функцій та команд. Нижче наведено опис кожного дозволу та його призначення.
+The AnhyFamily plugin provides a flexible permission system to manage access to various features and commands. Below is a description of each permission and its purpose.
 
 - **`family.admin`**  
-  Дозволяє виконувати адміністративні команди, включаючи керування сімейними зв'язками, примусову зміну статі та інші модераторські функції.
+  Allows executing administrative commands, including managing family ties, forcibly changing gender, and other moderator functions.
 
 - **`family.user`**  
-  Дозволяє гравцям одружуватися та усиновлювати інших гравців. Цей дозвіл необхідний для базової соціальної взаємодії у межах плагіна.
+  Allows players to marry and adopt other players. This permission is required for basic social interaction within the plugin.
 
 - **`family.pastor`**  
-  Дозволяє священникам проводити весільні церемонії та пропонувати зміни до імен та прізвищ гравців. Цей дозвіл необхідний для виконання ролі священика на сервері.
+  Allows priests to conduct wedding ceremonies and propose changes to players' names and surnames. This permission is necessary for performing the role of a priest on the server.
 
 - **`family.tphome`**  
-  Дозволяє гравцям використовувати команду для телепортації на сімейний хом, минаючи всі обмеження.
+  Allows players to use the command to teleport to the family home, bypassing all restrictions.
 
 - **`family.chest.ignore.distance`**  
-  Дозволяє гравцям відкривати сімейну скриню незалежно від відстані до неї.
+  Allows players to open the family chest regardless of the distance to it.
 
 - **`family.chest.ignore.world`**  
-  Дозволяє гравцям відкривати сімейну скриню командою, оминаючи обмеження за світом. Це дає можливість доступу до скрині з різних світів гри.
+  Allows players to open the family chest via command, bypassing world restrictions. This enables access to the chest from different game worlds.
 
 - **`family.chest.click`**  
-  Дозволяє гравцям відкривати сімейну скриню кліком, навіть якщо кліковий доступ заборонений.
+  Allows players to open the family chest by clicking, even if click access is prohibited.
 
 - **`family.chest.break`**  
-  Дозволяє гравцям зламати сімейну скриню.
+  Allows players to break the family chest.
 
-Кожен з цих дозволів можна налаштовувати через плагін для керування дозволами, що дозволяє адміністраторам серверів точно визначати, які функції будуть доступні для різних груп гравців.
-
-
+Each of these permissions can be configured through a permission management plugin, enabling server administrators to precisely control which features are accessible to different player groups.

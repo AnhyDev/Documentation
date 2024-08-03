@@ -1,42 +1,41 @@
-Коли пара одружується та створюється сімейний блок, автоматично генерується сімейний префікс довжиною у 6 символів. Після цього, за бажанням, можна один раз змінити сімейний префікс на власний варіант.
+When a couple gets married and a family block is created, a family prefix of 6 characters is automatically generated. After this, if desired, the family prefix can be changed once to a custom variant.
 
-#### Вимоги до Сімейного Префіксу
+#### Family Prefix Requirements
 
-1. **Символи:** Префікс має складатися з латинських літер верхнього регістру.
-2. **Довжина:** Префікс повинен містити від 3 до 5 символів.
-3. **Унікальність:** Префікс повинен бути унікальним, тобто не використовуватися іншою сім'єю.
+1. **Characters:** The prefix must consist of uppercase Latin letters.
+2. **Length:** The prefix must contain between 3 and 5 characters.
+3. **Uniqueness:** The prefix must be unique, meaning it should not be used by any other family.
 
-Сімейний префікс є унікальним ідентифікатором сім'ї. Він використовується у сімейному чаті та може бути інтегрований у будь-які інші плагіни за допомогою плейсхолдерів та API.
+The family prefix serves as a unique identifier for the family. It is used in the family chat and can be integrated into other plugins via placeholders and API.
 
-#### Зміна Сімейного Префіксу
+#### Changing the Family Prefix
 
-Для зміни сімейного префіксу використовується команда:
+To change the family prefix, use the command:
 
 ```
 /fprefix set <PREFIX>
 ```
 
-Цю команду може виконати один із сімейної пари. Після цього іншому члену сім'ї прийде запит на погодження або відмову від встановлення цього префіксу. Він може погодитися чи відмовити, клікнувши по відповідному пункту інтерактивного повідомлення або використавши команди:
+This command can be executed by one of the couple. Afterward, the other family member will receive a request to either approve or reject the new prefix. They can agree or decline by clicking the corresponding option in the interactive message or by using the commands:
 
 - **/fprefix accept**  
-  Погодження на встановлення нового префіксу.
+  Agree to set the new prefix.
 
 - **/fprefix refuse**  
-  Відмова від встановлення нового префіксу.
+  Decline to set the new prefix.
 
-#### Приклад Використання Команд
+#### Example of Command Usage
 
-1. Один із членів сім'ї виконує команду:
+1. One family member executes the command:
    ```
    /fprefix set ABC
    ```
-2. Інший член сім'ї отримує інтерактивне повідомлення з запитом на погодження.
-3. Для погодження або відмови можна використати команди:
+2. The other family member receives an interactive message with a request for approval.
+3. To approve or decline, they can use the commands:
    ```
    /fprefix accept
    ```
-   або
+   or
    ```
    /fprefix refuse
    ```
-

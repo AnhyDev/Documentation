@@ -1,20 +1,20 @@
-Конфігураційний файл плагіна AnhyFamily дозволяє налаштувати різні аспекти плагіна, від баз даних до сімейних функцій. Нижче наведено детальний опис кожного параметра конфігурації.
+The configuration file for the AnhyFamily plugin allows you to customize various aspects of the plugin, from database settings to family features. Below is a detailed description of each configuration parameter.
 
-#### Основні Налаштування
+#### Basic Settings
 
-- **language**: Мова за замовчуванням, яка буде використовуватися, якщо переклад не знайдено в бажаній мові.
+- **language**: The default language that will be used if a translation is not found in the desired language.
 ```yaml
   language: en
 ```
 
-- **plugin_name**: Назва плагіна, яка буде відображатися користувачам у чаті.
+- **plugin_name**: The name of the plugin that will be displayed to users in the chat.
 ```yaml
   plugin_name: AnhyFamily
 ```
 
-#### Налаштування Бази Даних
+#### Database Settings
 
-- **database**: Налаштування для підключення до бази даних. Можливі типи баз даних: 'SQLite' або 'MySQL'.
+- **database**: Settings for connecting to the database. Possible database types: 'SQLite' or 'MySQL'.
 ```yaml
   database:
     type: 'SQLite'
@@ -29,9 +29,9 @@
       autoReconnect: true
 ```
 
-#### Налаштування Цін
+#### Pricing Settings
 
-- **prices**: Налаштування валюти та цін на різні дії в плагіні.
+- **prices**: Settings for currency and pricing for various actions in the plugin.
 ```yaml
   prices:
     currency: VIRTUAL
@@ -40,9 +40,9 @@
     adoption: 0
 ```
 
-#### Налаштування Статі
+#### Gender Settings
 
-- **gender**: Налаштування, що дозволяють вибір небінарної статі та відповідні права для усиновлення та одруження.
+- **gender**: Settings that allow the selection of a non-binary gender and the corresponding rights for adoption and marriage.
 ```yaml
   gender:
     non_binary: false
@@ -50,30 +50,26 @@
     non_binary_marriage: false
 ```
 
-#### Налаштування Церемоній
+#### Ceremony Settings
 
-- **ceremonyRadius**: Максимальна відстань від священника до наречених. Якщо 0, то обмежень немає.
-
+- **ceremonyRadius**: The maximum distance from the priest to the couple. If 0, there are no limits.
 ```yaml
   ceremonyRadius: 20
 ```
 
-- **ceremonyHearingRadius**: Радіус, у якому повідомлення про одруження буде видно в чаті. Якщо 0, то всі гравці, які онлайн.
-
+- **ceremonyHearingRadius**: The radius within which the marriage announcements will be visible in the chat. If 0, all online players will see it.
 ```yaml
   ceremonyHearingRadius: 200
 ```
 
-- **marriedSymbol**: Символ, що використовується для позначення одружених гравців.
-
+- **marriedSymbol**: The symbol used to denote married players.
 ```yaml
   marriedSymbol: "⚭"
 ```
 
-#### Налаштування Приватної Церемонії
+#### Private Ceremony Settings
 
-- **privateCeremony**: Локація для проведення приватної церемонії одруження.
-
+- **privateCeremony**: The location for holding a private marriage ceremony.
 ```yaml
   privateCeremony:
     world: "world"
@@ -82,20 +78,18 @@
     z: -200
 ```
 
-#### Налаштування Сімейного Хому
+#### Family Home Settings
 
-- **home**: Налаштування для сімейного хому.
-
+- **home**: Settings for the family home.
 ```yaml
   home:
     timeout: 1440
     world: false
 ```
 
-#### Налаштування Сімейної Скрині
+#### Family Chest Settings
 
-- **chest**: Налаштування для сімейної скрині.
-
+- **chest**: Settings for the family chest.
 ```yaml
   chest:
     command: true
@@ -108,15 +102,14 @@
     distance_to_home: 20
 ```
 
-#### Налаштування Імен та Прізвищ
+#### Name and Surname Restrictions
 
-- **languages_limitation**: Налаштування обмежень для імен та прізвищ за допомогою регулярних виразів.
-
+- **languages_limitation**: Settings that restrict names and surnames using regular expressions.
 ```yaml
   languages_limitation: "^(?!.*[-']{2})(?!.*--)(?!.*'')\\p{L}['-]*[\\p{L}]+$"
 ```
 
-### Приклад Конфігураційного Файлу
+### Configuration File Example
 
 ```yaml
 #
@@ -180,6 +173,4 @@ chest:
 languages_limitation: "^(?!.*[-']{2})(?!.*--)(?!.*'')\\p{L}['-]*[\\p{L}]+$"
 ```
 
-Цей файл конфігурації дозволяє налаштувати плагін AnhyFamily відповідно до ваших потреб, забезпечуючи гнучке управління базою даних, цінами, гендерними параметрами, церемоніями, сімейними локаціями та обмеженнями для імен та прізвищ.
-
-
+This configuration file allows you to set up the AnhyFamily plugin according to your needs, providing flexible control over the database, pricing, gender parameters, ceremonies, family locations, and restrictions on names and surnames.

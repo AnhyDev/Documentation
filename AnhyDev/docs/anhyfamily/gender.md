@@ -1,41 +1,38 @@
-#### Стать
-Плагін AnhyFamily дозволяє гравцям встановлювати та керувати своєю статтю, що відкриває додаткові можливості для інтеграції у сімейні стосунки та взаємодію у грі. Нижче наведено деталі щодо вибору та використання статі в плагіні.
+The AnhyFamily plugin allows players to set and manage their gender, which enhances integration into family relationships and interactions within the game. Below are the details on choosing and using gender in the plugin.
 
-#### Команди для налаштування статі
-- **/gender** (псевдоніми: /identity, /gen)  
-  Основна команда для керування статтю гравця.
+#### Commands for Setting Gender
+- **/gender** (aliases: /identity, /gen)  
+  The primary command for managing the player's gender.
 
-##### Субкоманди:
+##### Subcommands:
 - **/gender info**  
-  Показує поточну стать гравця, який виконав команду. Якщо додати нікнейм гравця, то буде показана стать вказаного гравця.
+  Displays the current gender of the player who executed the command. If a player’s nickname is added, it shows the gender of the specified player.
 
 - **/gender set [male|female|non_binary]**  
-  Встановлює відповідну стать для гравця. Чоловіча та жіноча стать доступні за змовчуванням, тоді як небінарна стать доступна лише у випадку, якщо це дозволено у конфігурації плагіна.
+  Sets the corresponding gender for the player. Male and female genders are available by default, while the non-binary gender is only available if allowed in the plugin configuration.
 
-#### Вплив статі
-Стать гравця допомагає в його ідентифікації та додає глибину ігровому процесу. За допомогою плейсхолдерів, що надають як символ статі, так і її назву, можна налаштовувати префікси у чаті. 
+#### Impact of Gender
+A player's gender helps with identification and adds depth to the gameplay. Using placeholders that provide both the gender symbol and its name, you can customize chat prefixes.
 
-Крім того, за замовчуванням, шлюби дозволені лише між чоловіком та жінкою, аналогічно усиновлювати за замовчуванням може лише пара, чоловік та жінка. Це обмеження можна зняти шляхом внесення змін до конфігурації плагіна, що дозволить одруження між гравцями будь-якої статі, включаючи одностатеві, небінарні та невизначені.
+Additionally, by default, marriages are only allowed between a male and a female, and similarly, adoption is typically only allowed for male-female couples. These restrictions can be lifted by modifying the plugin configuration to allow marriages and adoptions between players of any gender, including same-sex, non-binary, and undefined.
 
-#### Приклад конфігурації
+#### Configuration Example
 ```yaml
 gender:
-  # Дозволити вибір небінарної статі
+  # Allow the selection of a non-binary gender
   non_binary: false
-  # Дозволити усиновлення для небінарних та невизначених статей
+  # Allow adoption for non-binary and undefined genders
   non_binary_adoption: false
-  # Дозволити шлюби для небінарних та невизначених статей
+  # Allow marriages for non-binary and undefined genders
   non_binary_marriage: false
 ```
 
-#### Адміністративні команди
+#### Administrative Commands
 - **/anhyfam forcegender `<PlayerName>` `<gender>`**  
-  Примусова зміна статі гравця. Команда доступна лише з консолі.
+  Forces a gender change for the player. This command is only available from the console.
 
 - **/anhyfam genderreset `<PlayerName>`**  
-  Скидання статі гравця на "невизначився". Команда доступна лише з консолі.
+  Resets the player's gender to "undefined." This command is only available from the console.
 
-#### Інтеграція з іншими плагінами
-Стать гравців може бути використана в інших плагінах за допомогою API чи плейсхолдерів, що розширює можливості її застосування. Це дозволяє створювати ще більш інтерактивний та динамічний ігровий досвід.
-
-
+#### Integration with Other Plugins
+Player gender can be used in other plugins via API or placeholders, expanding its application possibilities. This allows for an even more interactive and dynamic gaming experience.

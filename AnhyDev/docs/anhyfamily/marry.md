@@ -1,64 +1,62 @@
-### Про одруження
-
-Плагін AnhyFamily надає розширений функціонал, який дозволяє гравцям одружуватися, створюючи сім'ї у грі Minecraft. За замовчуванням одружитися можуть лише чоловік та жінка, але це можна змінити у конфігурації плагіна:
+The AnhyFamily plugin provides advanced functionality that allows players to get married, forming families within the Minecraft game. By default, only male and female players can marry, but this can be changed in the plugin configuration:
 
 ```yaml
-# Дозволити одностатеві шлюби а також для небінарних та невизначених статей
+# Allow same-sex marriages as well as for non-binary and undefined genders
 non_binary_marriage: false
 ```
 
-#### Вимоги до Одруження
+#### Marriage Requirements
 
-1. **Ім'я та Прізвище:** У кожного з наречених має бути встановлено ім'я та прізвище.
-2. **Родинні зв'язки:** Наречені не можуть бути родичами (предками чи нащадками один одного).
-3. **Оплата за церемонію:** Якщо це вказано у конфігурації, то за церемонію одруження у наречених буде знято оплату. Платіжні засоби можуть бути віртуальними, предметами чи криптовалютою (останнє ще не реалізовано).
+1. **Name and Surname:** Both partners must have a name and surname set.
+2. **Family Ties:** The partners cannot be related (not ancestors or descendants of each other).
+3. **Payment for the Ceremony:** If specified in the configuration, a payment will be required for the marriage ceremony. Payment methods can include virtual currency, items, or cryptocurrency (the latter is not yet implemented).
 
 ```yaml
 prices:
-  # Віртуальні гроші, предмети, криптовалюта (ще не реалізовано)
+  # Virtual money, items, cryptocurrency (not yet implemented)
   currency: VIRTUAL
   marriage: 0
   divorce: 0
   adoption: 0
 ```
-Якщо в конфігурації встановлено оплату за церемонію одруження, то зазначена сума буде знята з кожного з наречених під час церемонії. Якщо хоча б у одного з наречених недостатньо коштів, церемонія буде скасована.
+If a payment is required for the marriage ceremony, the specified amount will be deducted from each partner during the ceremony. If either partner lacks sufficient funds, the ceremony will be canceled.
 
-#### Типи Одружень
+#### Types of Marriage
 
-Існує два типи одружень: публічне та приватне.
+There are two types of marriage: public and private.
 
-##### Публічне Одруження
+##### Public Marriage
 
-Публічна церемонія проводиться за участі священника і може відбуватися у будь-якому місці.
+A public ceremony is conducted with the participation of a priest and can take place anywhere.
 
-- **Команда для священника:**  
+- **Command for the priest:**  
   ```
   /marry public <PlayerName1> <PlayerName2> [0|1|2]
   ```
-  Останній числовий аргумент (необов'язковий) визначає спільне прізвище:
-  - `0` - кожен зберігає своє прізвище.
-  - `1` - другий гравець бере прізвище першого.
-  - `2` - перший гравець бере прізвище другого.
-  - Якщо не вказати нічого, рівнозначно `1`.
+  The last numerical argument (optional) determines the shared surname:
+  - `0` - each partner keeps their own surname.
+  - `1` - the second player takes the surname of the first.
+  - `2` - the first player takes the surname of the second.
+  - If nothing is specified, it defaults to `1`.
 
-- **Процес:**  
-  Після введення команди священником, обом нареченим відправляється запит з пропозицією погодитися або відмовитися. При згоді відбувається одруження, при відмові церемонія скасовується.
+- **Process:**  
+  After the command is entered by the priest, both partners receive a prompt to agree or decline. If both agree, the marriage takes place; if either declines, the ceremony is canceled.
 
-- **Чат-повідомлення:**  
-  Повідомлення священника та шлюбні клятви гравців можуть бачити або всі на сервері, або лише ті, хто є у певному радіусі від місця церемонії.
+- **Chat Messages:**  
+  The priest's messages and the marriage vows can be seen by either everyone on the server or only those within a certain radius of the ceremony.
 
 ```yaml
-# Максимальна відстань від священника до наречених. Якщо 0, то обмежень немає.
+# Maximum distance from the priest to the partners. If 0, there are no limits.
 ceremonyRadius: 20
-# Радіус, у якому повідомлення про одруження буде видно в чаті. Якщо 0, то всі гравці, які онлайн.
+# Radius within which the marriage messages will be visible in chat. If 0, all online players will see it.
 ceremonyHearingRadius: 200
 ```
 
-##### Приватне Одруження
+##### Private Marriage
 
-Приватна церемонія проводиться лише за участі наречених у визначеній локації.
+A private ceremony involves only the partners and takes place in a specified location.
 
-- **Конфігурація локації:**
+- **Location Configuration:**
 
 ```yaml
   privateCeremony:
@@ -67,24 +65,24 @@ ceremonyHearingRadius: 200
     y: 64
     z: -200
 ```
-  Наречені повинні бути в радіусі 10 блоків від вказаних координат.
+  The partners must be within 10 blocks of the specified coordinates.
 
-- **Команда для наречених:**
+- **Command for the partners:**
   ```
   /marry private <PlayerName>
   ```
-  Гравець, зазначений у команді, отримує запит на підтвердження або відмову від церемонії. При згоді відбувається одруження, при відмові - церемонія скасовується.
+  The player specified in the command receives a prompt to confirm or decline the ceremony. If they agree, the marriage takes place; if they decline, the ceremony is canceled.
 
-- **Чат-повідомлення:**  
-  Про церемонію можуть дізнатися з чату лише гравці, які знаходяться поряд.
+- **Chat Messages:**  
+  Only players nearby will learn about the ceremony from the chat.
 
-#### Після Одруження
+#### After Marriage
 
-Після одруження створюється сімейний об'єкт, який зберігає інформацію про:
+After marriage, a family object is created, which stores information about:
 
-- Сімейну локацію дому.
-- Сімейну скриню.
-- Список батьків та дітей обох наречених.
-- Доступ до сімейного чату, дому, скрині та інші права.
+- The family's home location.
+- The family chest.
+- The list of parents and children of both partners.
+- Access to the family chat, home, chest, and other rights.
 
-Сімейний об'єкт існує, доки існує сім'я, тобто до розлучення.
+The family object exists as long as the family exists, that is, until a divorce occurs.

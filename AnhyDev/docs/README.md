@@ -1,11 +1,15 @@
-## Ласкаво просимо на сайт документації AnhyDev!
+<div align="center">
+    <img src="assets/logo_maxy.png" alt="AnhyDev">
+</div>
 
-Цей сайт містить детальну документацію по всіх продуктах, розроблених командою **AnhyDev**. Ми спеціалізуємося на створенні високоякісних плагінів для серверів Minecraft та інших корисних інструментів для гравців і адміністраторів.
+## Welcome to the AnhyDev Documentation Site!
 
-На цьому ресурсі ви знайдете повний опис функціоналу наших плагінів, покрокові інструкції з налаштування, приклади використання, а також важливі технічні деталі, які допоможуть вам максимально ефективно використовувати наші продукти.
+This site contains detailed documentation for all products developed by the **AnhyDev** team. We specialize in creating high-quality plugins for Minecraft servers and other useful tools for players and administrators.
 
-Сайт організований так, щоб ви могли легко знайти потрібну інформацію про кожен продукт, від налаштувань до команд, доступних у грі, і навіть інтеграцій з іншими сервісами.
+Here, you will find a comprehensive description of the functionality of our plugins, step-by-step setup instructions, usage examples, and important technical details to help you make the most out of our products.
 
-**AnhyDev** прагне забезпечити вас найкращими інструментами для вашого Minecraft-сервера, і ми сподіваємося, що ця документація стане надійним путівником у світі наших продуктів.
+The site is organized so that you can easily find the necessary information about each product, from configuration settings to in-game commands and even integrations with other services.
 
-Дякуємо за вашу довіру і бажаємо успішної роботи з нашими продуктами!
+**AnhyDev** is committed to providing you with the best tools for your Minecraft server, and we hope this documentation will serve as a reliable guide to our products.
+
+Thank you for your trust, and we wish you success in working with our products!

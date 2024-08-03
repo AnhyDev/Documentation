@@ -1,58 +1,58 @@
-AnhyFamily плагін надає широкий спектр плейсхолдерів для використання іншими плагінами чи скриптами, за допомогою плагіна PlaceholderAPI. Це дозволяє використовувати інформацію про гравців та їхні сім'ї у різних контекстах гри, надаючи більше гнучкості та можливостей для налаштування.
+The AnhyFamily plugin provides a wide range of placeholders for use in other plugins or scripts through the PlaceholderAPI plugin. This allows for the incorporation of player and family information into various game contexts, offering greater flexibility and customization options.
 
-#### Використання Плейсхолдерів з PlaceholderAPI
+#### Using Placeholders with PlaceholderAPI
 
-Для використання плейсхолдерів AnhyFamily, необхідно встановити плагін PlaceholderAPI та додати до нього розширення Expansion-anhy.jar.
+To use AnhyFamily placeholders, you need to install the PlaceholderAPI plugin and add the extension `Expansion-anhy.jar`.
 
 #### Gender-related Placeholders
 
-Ці плейсхолдери пов'язані зі статтю гравця:
+These placeholders are related to the player's gender:
 
 - **%anhy_gender%**  
-  Повертає стать гравця.
+  Returns the player's gender.
 
 - **%anhy_gender_key%**  
-  Повертає ключ файлу мови для статі гравця.
+  Returns the language file key for the player's gender.
 
 - **%anhy_gender_lang%**  
-  Повертає назву статі на мові гравця.
+  Returns the name of the player's gender in their language.
 
 - **%anhy_gender_hexcolor%**  
-  Повертає HEX-код кольору, пов'язаний зі статтю гравця.
+  Returns the HEX color code associated with the player's gender.
 
 #### Family-related Placeholders
 
-Ці плейсхолдери пов'язані з сім'єю гравця:
+These placeholders are related to the player's family:
 
 - **%anhy_family_firstname%**  
-  Повертає ім'я гравця.
+  Returns the player's first name.
 
 - **%anhy_family_lastname%**  
-  Повертає прізвище гравця відповідно до статі.
+  Returns the player's surname according to their gender.
 
 - **%anhy_family%**  
-  Повертає серіалізований JSON-рядок об'єкта сім'ї гравця, який можна обробляти зручно для користувача.
+  Returns a serialized JSON string of the player's family object, which can be processed for user-friendly usage.
 
 - **%anhy_family_mother%**  
-  Повертає UUID рядок матері гравця.
+  Returns the UUID string of the player's mother.
 
 - **%anhy_family_father%**  
-  Повертає UUID рядок батька гравця.
+  Returns the UUID string of the player's father.
 
 - **%anhy_family_spouse%**  
-  Повертає UUID рядок подружжя гравця.
+  Returns the UUID string of the player's spouse.
 
 - **%anhy_family_children%**  
-  Повертає комою розділений список UUID рядків дітей гравця.
+  Returns a comma-separated list of UUID strings of the player's children.
 
 - **%anhy_family_info%**  
-  Повертає детальну інформацію про сім'ю гравця у вигляді мовних ключів.
+  Returns detailed information about the player's family in the form of language keys.
 
 - **%anhy_family_info_translated%**  
-  Повертає детальну інформацію про сім'ю гравця, перекладену на мову гравця.
+  Returns detailed information about the player's family, translated into the player's language.
 
 - **%anhy_family_tree%**  
-  Повертає текстове представлення сімейного дерева гравця у вигляді мовних ключів.
+  Returns a textual representation of the player's family tree in the form of language keys.
 
 - **%anhy_family_tree_translated%**  
-  Повертає текстове представлення сімейного дерева гравця, перекладене на мову гравця.
+  Returns a textual representation of the player's family tree, translated into the player's language.

@@ -1,3 +1,7 @@
+<div align="center">
+    <img src="assets/logo_maxy.png" alt="AnhyFamily">
+</div>
+
 ### AnhyLibAPI: For Minecraft Plugins
 
 **AnhyLibAPI** is a library designed for integration into Minecraft plugins, developed to enhance their capabilities on servers running on Spigot, Paper, Purpur, and other Spigot forks.

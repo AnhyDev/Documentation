@@ -55,32 +55,52 @@ repo_url: https://github.com/AnhyDev/AnhyFamily
 nav:
   - Home: README.md
   - ANHYLIBAPI:
-    - AnhyLibAPI: anhylibapi/README.md
+    - Plugin Documentation: anhylibapi/README.md
     - Details: anhylibapi/details.md
     - Usage: anhylibapi/usage.md
   - ANHYFAMILY:
-    - AnhyFamily: anhyfamily/README.md
-    - КОМАНДИ:
-        - Команди та Керування: anhyfamily/commands.md
-    - ПЕРСОНАЛІЗАЦІЯ:
-        - Стать Гравця: anhyfamily/gender.md
-        - "Ім'я та Прізвище": anhyfamily/names.md
-    - "СІМ'Я":
-      - Одруження: anhyfamily/marry.md
-      - Усиновлення: anhyfamily/adopt.md
-      - Розірвання Родинних Стосунків: anhyfamily/separate.md
-      - Інформаційний Блок: anhyfamily/info.md
-    - СІМЕЙНІ ФУНКЦІЇ:
-      - Сімейний Префікс: anhyfamily/prefix.md
-      - Сімейний Чат: anhyfamily/chat.md
-      - Сімейний Хом: anhyfamily/home.md
-      - Сімейна Скриня: anhyfamily/chest.md
-    - ПЛАТЕЖІ:
-      - Оплата в Віртуальній Валюті: anhyfamily/vault.md
-      - Оплата в Предметах: anhyfamily/items.md
-      - Оплата в Криптовалюті: anhyfamily/crypto.md
-    - ДОДАТКОВО:
-      - Обнімашки: anhyfamily/hugs.md
-      - Конфігураційний Файл: anhyfamily/config.md
-      - Плейсхолдери: anhyfamily/placeholders.md
-      - Дозволи: anhyfamily/permissions.md
+    - Plugin Documentation: anhyfamily/README.md
+    - COMMANDS:
+        - Commands: anhyfamily/commands.md
+    - PERSONALIZATION:
+        - Player Gender: anhyfamily/gender.md
+        - "Name and Surname": anhyfamily/names.md
+    - FAMILY:
+      - Marriage: anhyfamily/marry.md
+      - Adoption: anhyfamily/adopt.md
+      - Separation of Family Ties: anhyfamily/separate.md
+      - Info Block: anhyfamily/info.md
+    - FAMILY FUNCTIONS:
+      - Family Prefix: anhyfamily/prefix.md
+      - Family Chat: anhyfamily/chat.md
+      - Family Home: anhyfamily/home.md
+      - Family Chest: anhyfamily/chest.md
+    - PAYMENTS:
+      - Payment in Virtual Currency: anhyfamily/vault.md
+      - Payment in Items: anhyfamily/items.md
+      - Payment in Cryptocurrency: anhyfamily/crypto.md
+    - ADDITIONAL:
+      - Hugs: anhyfamily/hugs.md
+      - Configuration File: anhyfamily/config.md
+      - Placeholders: anhyfamily/placeholders.md
+      - Permissions: anhyfamily/permissions.md
+  - ANHYLINGO:
+    - Plugin Documentation: anhylingo/README.md
+    - Commands: anhylingo/commands.md
+    - Tags: anhylingo/nbt_tags.md
+    - File Management: anhylingo/files.md
+    - Configuration: anhylingo/configuration.md
+    - API AnhyLingo: anhylingo/api.md
+  - ANHYSHOP:
+    - Plugin Documentation: anhyshop/README.md
+    - Commands: anhyshop/commands.md
+    - Trading Operations: anhyshop/trading_operations.md
+    - Dependencies: anhyshop/dependencies.md
+  - ANHYREPO:
+    - Plugin Documentation: anhyrepo/README.md
+    - Features: anhyrepo/features.md
+    - Commands: anhyrepo/commands.md
+    - Interface: anhyrepo/interface.md
+    - Use Cases: anhyrepo/use_cases.md
+  - UTILS:
+    - Text Utils: utils/utils.md

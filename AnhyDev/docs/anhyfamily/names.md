@@ -1,66 +1,63 @@
-#### Ім'я та Прізвище
-Плагін AnhyFamily надає можливість гравцям встановлювати собі ім'я та прізвище, які будуть використовуватися при виводі інформації про гравця, його сім'ю та сімейне дерево. Ці дані можуть бути отримані за допомогою плейсхолдерів або API для використання у будь-яких ситуаціях.
+The AnhyFamily plugin allows players to set their own name and surname, which will be used when displaying information about the player, their family, and the family tree. This data can be accessed via placeholders or the API for use in various contexts.
 
-#### Встановлення Імені та Прізвища
+#### Setting the Name and Surname
 
 - **/family firstname `<Firstname>`**  
-  Вибір імені гравця. Максимальна довжина імені - 12 символів. Наприклад:
+  Sets the player's first name. The maximum length for a name is 12 characters. For example:
   ```
-  /family firstname Джон
+  /family firstname John
   ```
 
 - **/family surname `<Surname male version[/Surname female version]>`**  
-  Вибір прізвища гравця. Якщо чоловіча та жіноча версія прізвища відрізняються, вони вказуються через слеш. Наприклад:
+  Sets the player's surname. If the male and female versions of the surname differ, they are separated by a slash. For example:
   ```
-  /family surname Зеленський/Зеленська
+  /family surname Smith/Smithson
   ```
-  Якщо прізвище однакове для обох статей, вказується лише одна версія:
+  If the surname is the same for both genders, only one version is provided:
   ```
-  /family surname Джонсон
+  /family surname Johnson
   ```
-  Максимальна довжина прізвища - 15 символів.
+  The maximum length for a surname is 15 characters.
 
-  Гравець, який встановив собі ім'я чи прізвище, не може самостійно їх змінити. Для цього існують гравці зі спеціальними дозволами, так звані священники.
+  Once a player has set their name or surname, they cannot change it themselves. For this, players with special permissions, known as priests, are needed.
 
-#### Адміністративні Команди
+#### Administrative Commands
 
-Команди для примусового встановлення імені та прізвища, доступні лише з консолі:
+Commands for forcibly setting a name and surname, available only from the console:
 
 - **/anhyfam forcefirstname `<PlayerName>` `<Firstname>`**  
-  Примусове встановлення імені гравця.
+  Forces the player's first name to be set.
 
 - **/anhyfam forcesurname `<PlayerName>` `<Surname male version[/Surname female version]>`**  
-  Примусове встановлення прізвища гравця.
+  Forces the player's surname to be set.
 
-#### Команди для Священників
+#### Commands for Priests
 
-Гравці з правами "family.pastor" можуть пропонувати зміну імені чи прізвища іншим гравцям:
+Players with the "family.pastor" permission can suggest name or surname changes to other players:
 
-- **/family sugges firstname `<PlayerName>` `<Firstname>`**  
-  Пропозиція зміни імені.
+- **/family suggest firstname `<PlayerName>` `<Firstname>`**  
+  Suggests a name change.
 
-- **/family sugges surname `<PlayerName>` `<Surname male version[/Surname female version]>`**  
-  Пропозиція зміни прізвища.
+- **/family suggest surname `<PlayerName>` `<Surname male version[/Surname female version]>`**  
+  Suggests a surname change.
 
-Гравець може прийняти пропозицію командою:
+The player can accept the suggestion with the command:
 - **/family suggest accept**
 
-Або відхилити пропозицію командою:
+Or decline the suggestion with the command:
 - **/family suggest refuse**
 
-#### Обмеження для Прізвищ
+#### Surname Restrictions
 
-У конфігурації плагіна можна встановлювати обмеження щодо символів, які можуть використовуватися для прізвища, за допомогою регулярних виразів. Приклади:
+The plugin's configuration allows setting restrictions on the characters that can be used in surnames through regular expressions. Examples:
 
 ```yaml
-# Дозволені лише латинські літери, апострофи та дефіси
+# Only Latin letters, apostrophes, and hyphens are allowed
 # languages_limitation: "^(?!.*[-']{2})(?!.*--)(?!.*'')[a-zA-Z'-]+$"
-# Дозволені лише українські літери, апострофи та дефіси
+# Only Ukrainian letters, apostrophes, and hyphens are allowed
 # languages_limitation: "^(?!.*[-']{2})(?!.*--)(?!.*'')[а-щА-ЩЬьЮюЯяЇїІіЄєҐґ'-]+$"
-# Дозволені лише російські літери, апострофи та дефіси
+# Only Russian letters, apostrophes, and hyphens are allowed
 # languages_limitation: "^(?!.*[-']{2})(?!.*--)(?!.*'')[а-яА-ЯёЁ'-]+$"
-# Дозволені літери будь-якої мови, апострофи та дефіси
+# Letters from any language, apostrophes, and hyphens are allowed
 languages_limitation: "^(?!.*[-']{2})(?!.*--)(?!.*'')\\p{L}['-]*[\\p{L}]+$"
 ```
-
-

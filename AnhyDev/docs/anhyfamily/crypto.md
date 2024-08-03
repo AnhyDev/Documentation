@@ -1,19 +1,17 @@
-Оплата за події, такі як одруження, усиновлення чи розлучення, у криптовалюті - це функціональність, яка поки що не реалізована в плагіні AnhyFamily. Однак, ведеться активна розробка унікального плагіна, що дозволить здійснювати платежі, обмін і продаж цінностей за справжню криптовалюту. Цей новий плагін надасть можливість інтеграції криптовалютних транзакцій безпосередньо у вашому сервері Minecraft, роблячи ігровий процес ще більш захоплюючим та сучасним.
+Payment for events such as marriage, adoption, or divorce using cryptocurrency is a feature that is not yet implemented in the AnhyFamily plugin. However, active development is underway for a unique plugin that will enable payments, exchanges, and sales of assets using real cryptocurrency. This new plugin will allow the integration of cryptocurrency transactions directly on your Minecraft server, making the gameplay even more engaging and modern.
 
-#### Майбутні Можливості
+#### Upcoming Features
 
-1. **Підтримка Різних Криптовалют:** Планується підтримка найбільш популярних криптовалют, таких як Bitcoin, Ethereum, та інших. Це дозволить гравцям здійснювати транзакції в тій криптовалюті, яка для них зручніша.
+1. **Support for Various Cryptocurrencies:** The plugin is expected to support the most popular cryptocurrencies, such as Bitcoin, Ethereum, and others. This will allow players to make transactions in the cryptocurrency that is most convenient for them.
 
-2. **Безпечні Транзакції:** Новий плагін забезпечить високий рівень безпеки для всіх транзакцій, використовуючи передові технології шифрування та блокчейн. Це гарантує, що всі операції будуть захищені від шахрайства та несанкціонованого доступу.
+2. **Secure Transactions:** The new plugin will ensure a high level of security for all transactions, utilizing advanced encryption and blockchain technologies. This guarantees that all operations will be protected from fraud and unauthorized access.
 
-3. **Автоматизація Платежів:** Всі процеси оплати за події, обмін та продаж цінностей будуть автоматизовані, що дозволить гравцям зосередитися на грі, не турбуючись про технічні аспекти транзакцій.
+3. **Automated Payments:** All processes for paying for events, exchanging, and selling assets will be automated, allowing players to focus on gameplay without worrying about the technical aspects of transactions.
 
-4. **Інтуїтивно Зрозумілий Інтерфейс:** Плагін буде мати простий та зрозумілий інтерфейс для налаштування і використання. Гравці зможуть легко керувати своїми криптовалютними рахунками та здійснювати необхідні операції.
+4. **User-Friendly Interface:** The plugin will feature a simple and intuitive interface for configuration and use. Players will easily manage their cryptocurrency accounts and perform necessary operations.
 
-5. **Гнучка Конфігурація:** Адміністратори серверів матимуть можливість налаштовувати плагін відповідно до потреб своєї спільноти, включаючи встановлення комісій за транзакції, обмежень на мінімальні та максимальні суми, та багато іншого.
+5. **Flexible Configuration:** Server administrators will have the ability to configure the plugin according to the needs of their community, including setting transaction fees, limits on minimum and maximum amounts, and much more.
 
-#### Висновок
+#### Conclusion
 
-Запланована інтеграція криптовалютних платежів у плагін AnhyFamily відкриває нові горизонти для гравців і адміністраторів серверів. Це зробить ігровий процес більш інтерактивним та сучасним, дозволяючи гравцям використовувати свої криптовалютні активи безпосередньо у грі. Стежте за оновленнями, щоб бути в курсі останніх новин щодо впровадження цієї інноваційної функції!
-
-
+The planned integration of cryptocurrency payments into the AnhyFamily plugin opens up new possibilities for players and server administrators. It will make the gameplay more interactive and modern, allowing players to use their cryptocurrency assets directly in the game. Stay tuned for updates to keep abreast of the latest developments regarding this innovative feature!
