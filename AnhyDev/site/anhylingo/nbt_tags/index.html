@@ -20,7 +20,7 @@
     
     
       
-        <title>Tags - ANHYDEV</title>
+        <title>PersistentDataContainer - ANHYDEV</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nbt-tag-management" class="md-skip">
+        <a href="#adding-or-modifying-data" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tags
+              PersistentDataContainer
             
           </span>
         </div>
@@ -1345,7 +1345,7 @@
           
   
   <span class="md-ellipsis">
-    Tags
+    PersistentDataContainer
   </span>
   
 
@@ -1356,7 +1356,7 @@
         
   
   <span class="md-ellipsis">
-    Tags
+    PersistentDataContainer
   </span>
   
 
@@ -1376,44 +1376,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nbt-tag-management" class="md-nav__link">
+  <a href="#adding-or-modifying-data" class="md-nav__link">
     <span class="md-ellipsis">
-      NBT Tag Management
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="NBT Tag Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adding-or-modifying-an-nbt-tag" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding or Modifying an NBT Tag
+      Adding or Modifying Data
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#viewing-nbt-tags" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#viewing-data-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing NBT Tags
+      Viewing Data List
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#viewing-nbt-tag-values" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#viewing-specific-data-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing NBT Tag Values
+      Viewing Specific Data Values
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1872,44 +1857,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nbt-tag-management" class="md-nav__link">
+  <a href="#adding-or-modifying-data" class="md-nav__link">
     <span class="md-ellipsis">
-      NBT Tag Management
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="NBT Tag Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adding-or-modifying-an-nbt-tag" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding or Modifying an NBT Tag
+      Adding or Modifying Data
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#viewing-nbt-tags" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#viewing-data-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing NBT Tags
+      Viewing Data List
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#viewing-nbt-tag-values" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#viewing-specific-data-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing NBT Tag Values
+      Viewing Specific Data Values
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1931,21 +1901,21 @@
   
 
 
-  <h1>Tags</h1>
+  <h1>PersistentDataContainer</h1>
 
-<h3 id="nbt-tag-management">NBT Tag Management</h3>
-<h4 id="adding-or-modifying-an-nbt-tag">Adding or Modifying an NBT Tag</h4>
-<pre><code>/lingo nbt set &lt;nbt_key&gt; &lt;params...&gt;
+<h4 id="adding-or-modifying-data">Adding or Modifying Data</h4>
+<pre><code>/lingo data set &lt;data_key&gt; &lt;params...&gt;
 </code></pre>
-<p>Sets the NBT tag <code>nbt_key</code> with parameters <code>params</code>, specifying the data type (e.g., <code>string:value, int:10</code>).</p>
-<h4 id="viewing-nbt-tags">Viewing NBT Tags</h4>
-<pre><code>/lingo nbt list
+<p>Sets the key <code>data_key</code> with parameters <code>params</code>, specifying the data type (e.g., <code>string:value, int:10</code>). This command stores data in the <code>PersistentDataContainer</code> for the item in the player's hand.</p>
+<h4 id="viewing-data-list">Viewing Data List</h4>
+<pre><code>/lingo data list
 </code></pre>
-<p>Displays a list of NBT tags for the item in the player's hand.</p>
-<h4 id="viewing-nbt-tag-values">Viewing NBT Tag Values</h4>
-<pre><code>/lingo nbt info &lt;nbt_key&gt;
+<p>Displays a list of all data stored in the <code>PersistentDataContainer</code> for the item in the player's hand.</p>
+<h4 id="viewing-specific-data-values">Viewing Specific Data Values</h4>
+<pre><code>/lingo data info &lt;data_key&gt;
 </code></pre>
-<p>Shows the value of a specific NBT tag for the item in the player's hand.</p>
+<p>Shows the value of a specific key <code>data_key</code> stored in the <code>PersistentDataContainer</code> for the item in the player's hand.</p>
+<p>These changes ensure that data management is done using the safer and more convenient <code>PersistentDataContainer</code>, while maintaining similar functionality to the previous NBT-based system.</p>
 
 
 

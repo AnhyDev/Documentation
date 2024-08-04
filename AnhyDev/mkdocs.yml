@@ -87,7 +87,7 @@ nav:
   - ANHYLINGO:
     - Plugin Documentation: anhylingo/README.md
     - Commands: anhylingo/commands.md
-    - Tags: anhylingo/nbt_tags.md
+    - PersistentDataContainer: anhylingo/nbt_tags.md
     - File Management: anhylingo/files.md
     - Configuration: anhylingo/configuration.md
     - API AnhyLingo: anhylingo/api.md

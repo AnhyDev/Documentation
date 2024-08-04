@@ -17,9 +17,9 @@
 2. **Item Management**
     - Ability to create multilingual items (for players with administrative rights).
 
-3. **NBT Tag Management**
-    - View available NBT tags for items.
-    - Set, modify, and delete NBT tags for items.
+3. **Data Container Management**
+    - View available data stored in the `PersistentDataContainer` for items.
+    - Set, modify, and delete data in the `PersistentDataContainer` for items.
 
 4. **File Management**
     - Upload language files to the plugin's folder.

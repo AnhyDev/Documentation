@@ -47,7 +47,7 @@ Displays a list of "keys" for all items that have translations in the specified 
 ###### Viewing Localization by Key
 
 ```shell
-/lingo item <lang> <key>
+/lingo items <lang> <key>
 ```
 
 Shows the name and description in the specified language for the given key.

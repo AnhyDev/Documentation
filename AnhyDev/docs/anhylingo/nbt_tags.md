@@ -1,23 +1,22 @@
-### NBT Tag Management
-
-#### Adding or Modifying an NBT Tag
+#### Adding or Modifying Data
 
 ```
-/lingo nbt set <nbt_key> <params...>
+/lingo data set <data_key> <params...>
 ```
-Sets the NBT tag `nbt_key` with parameters `params`, specifying the data type (e.g., `string:value, int:10`).
+Sets the key `data_key` with parameters `params`, specifying the data type (e.g., `string:value, int:10`). This command stores data in the `PersistentDataContainer` for the item in the player's hand.
 
-#### Viewing NBT Tags
-
-```
-/lingo nbt list
-```
-Displays a list of NBT tags for the item in the player's hand.
-
-#### Viewing NBT Tag Values
+#### Viewing Data List
 
 ```
-/lingo nbt info <nbt_key>
+/lingo data list
 ```
-Shows the value of a specific NBT tag for the item in the player's hand.
+Displays a list of all data stored in the `PersistentDataContainer` for the item in the player's hand.
 
+#### Viewing Specific Data Values
+
+```
+/lingo data info <data_key>
+```
+Shows the value of a specific key `data_key` stored in the `PersistentDataContainer` for the item in the player's hand.
+
+These changes ensure that data management is done using the safer and more convenient `PersistentDataContainer`, while maintaining similar functionality to the previous NBT-based system.
